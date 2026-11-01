@@ -1,0 +1,423 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="A daily Hong Kong geography game. The rarer your answer, the more it scores.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+<title>Kaifong 街坊</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@500;600&family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@700;900&display=swap">
+<style>
+/* Layout: one narrow column like a station platform; prompts read as bilingual station name boards on a tiled wall. */
+:root{
+  --wall:#eef1ec; --tile:#e1e6df; --board:#ffffff; --ink:#15201b; --muted:#5d6b64; --line:#c9d1cb;
+  --red:#c8102e; --green:#0d7a4c; --blue:#1d4f91; --gold:#b98a10; --grey:#8a948f; --miss:#3a4440;
+  --accent:var(--red);
+  --f-han:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --f-sans:"Archivo","Noto Sans TC",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-tc:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --wall:#0f1513; --tile:#141c19; --board:#1b2421; --ink:#e8eeea; --muted:#9aa8a1; --line:#2c3833;
+  --red:#ef4a5f; --green:#2fb57a; --blue:#6d9be0; --gold:#e0b73f; --grey:#7f8a85; --miss:#55605b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --wall:#0f1513; --tile:#141c19; --board:#1b2421; --ink:#e8eeea; --muted:#9aa8a1; --line:#2c3833;
+  --red:#ef4a5f; --green:#2fb57a; --blue:#6d9be0; --gold:#e0b73f; --grey:#7f8a85; --miss:#55605b; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{background:var(--wall);color:var(--ink);font:15px/1.5 var(--f-sans);
+  background-image:linear-gradient(var(--tile) 1px,transparent 1px),linear-gradient(90deg,var(--tile) 1px,transparent 1px);
+  background-size:22px 22px;}
+.wrap{max-width:680px;margin:0 auto;padding-block:20px 60px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:18px}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand .han{font:900 44px/1 var(--f-han);letter-spacing:.02em}
+.brand .lat{font:800 15px/1 var(--f-sans);font-stretch:125%;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+nav{display:flex;gap:4px;background:var(--board);border:1px solid var(--line);border-radius:999px;padding:3px}
+nav a{font:600 13px/1 var(--f-sans);color:var(--muted);text-decoration:none;padding:8px 13px;border-radius:999px}
+nav a[aria-current="page"]{background:var(--ink);color:var(--board)}
+nav a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sub{font:500 12px/1.4 var(--f-mono);color:var(--muted);letter-spacing:.04em}
+h2{font:800 20px/1.2 var(--f-sans);font-stretch:110%;margin:0;text-wrap:balance}
+p{margin:0}
+.panel{background:var(--board);border:1px solid var(--line);border-radius:6px;padding:18px}
+/* station board */
+.board{background:var(--board);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.board .band{height:14px;background:repeating-linear-gradient(90deg,var(--accent) 0 20px,color-mix(in srgb,var(--accent) 82%,var(--board)) 20px 22px)}
+.board .inner{padding:20px 20px 18px;display:flex;flex-direction:column;gap:14px}
+.qzh{font:900 clamp(26px,6.4vw,36px)/1.25 var(--f-han);text-wrap:balance}
+.qen{font:600 17px/1.35 var(--f-sans);text-wrap:balance}
+.meta{display:flex;justify-content:space-between;align-items:center;gap:8px;font:600 12px/1 var(--f-mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.timer{height:6px;background:var(--tile);border-radius:3px;overflow:hidden}
+.timer i{display:block;height:100%;width:100%;background:var(--ink);transform-origin:left;}
+.timer.low i{background:var(--red)}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+input[type=text],input:not([type]),select,textarea{font:16px/1.3 var(--f-sans);color:var(--ink);background:var(--wall);border:1px solid var(--line);border-radius:4px;padding:11px 12px;min-width:0}
+.row input{flex:1 1 220px}
+button{font:700 14px/1 var(--f-sans);border:1px solid var(--ink);background:var(--ink);color:var(--board);border-radius:4px;padding:12px 16px;cursor:pointer}
+button.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+button.small{padding:7px 10px;font-size:12px}
+button:disabled{opacity:.45;cursor:not-allowed}
+/* tiers */
+.pill{display:inline-flex;align-items:center;gap:6px;font:700 12px/1 var(--f-sans);padding:5px 9px;border-radius:3px;color:#fff;white-space:nowrap}
+.t10{background:var(--grey)} .t30{background:var(--green)} .t60{background:var(--blue)} .t85{background:var(--red)} .t100{background:var(--gold)} .t0{background:var(--miss)}
+.legend{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.legend div{display:flex;flex-direction:column;gap:6px;align-items:flex-start;font:12px/1.3 var(--f-sans);color:var(--muted)}
+.legend b{font:600 18px/1 var(--f-mono);color:var(--ink);font-variant-numeric:tabular-nums}
+@media (max-width:520px){.legend{grid-template-columns:repeat(3,1fr)}}
+.result{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px;border:1px dashed var(--line);border-radius:4px}
+.result .ans{font:700 18px/1.25 var(--f-sans)} .result .ans small{display:block;font:400 14px/1.3 var(--f-tc);color:var(--muted)}
+.pts{font:600 30px/1 var(--f-mono);font-variant-numeric:tabular-nums}
+.score{display:flex;align-items:baseline;gap:8px}
+.score .big{font:600 56px/1 var(--f-mono);font-variant-numeric:tabular-nums}
+.list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.list>div{display:grid;grid-template-columns:28px 1fr auto auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.list .n{font:600 12px/1 var(--f-mono);color:var(--muted)}
+.list .q{font-size:13px;color:var(--muted);min-width:0}
+.list .q b{display:block;color:var(--ink);font-size:15px}
+.list .p{font:600 16px/1 var(--f-mono);font-variant-numeric:tabular-nums;min-width:34px;text-align:right}
+details{border-top:1px solid var(--line);padding-top:10px}
+summary{cursor:pointer;font-weight:600}
+.reveal{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.reveal .tier{display:grid;grid-template-columns:92px 1fr;gap:10px;align-items:start}
+.reveal .names{font-size:13px;line-height:1.6;color:var(--ink)}
+.reveal .names span{white-space:nowrap}
+.reveal .names em{font-style:normal;color:var(--muted);font:500 11px var(--f-mono)}
+.empty{text-align:center;padding:36px 18px;display:flex;flex-direction:column;gap:10px;align-items:center}
+.empty .han{font:900 40px/1 var(--f-han);color:var(--muted)}
+.note{font-size:13px;color:var(--muted)}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--board);padding:10px 16px;border-radius:4px;font-weight:600;z-index:20}
+.arch{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.arch button{display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;background:var(--board);color:var(--ink);border-color:var(--line);padding:12px}
+.arch button span{font:500 12px var(--f-mono);color:var(--muted)}
+/* editor */
+.ed{display:flex;flex-direction:column;gap:14px}
+.ed .grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (max-width:560px){.ed .grid2{grid-template-columns:1fr}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:4px}
+.tbl table{border-collapse:collapse;width:100%;min-width:640px;font-size:13px}
+.tbl th{font:600 11px/1 var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:left;padding:8px;border-bottom:1px solid var(--line);background:var(--wall)}
+.tbl td{padding:4px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
+.tbl input,.tbl select{padding:6px 8px;font-size:13px;width:100%}
+.tbl td.stat{font:500 12px var(--f-mono);color:var(--muted);white-space:nowrap;text-align:right}
+.warn{color:var(--gold);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:4px 6px 4px 10px;font-size:13px}
+.chip button{padding:4px 7px;font-size:11px}
+textarea{width:100%;min-height:140px;font:12px/1.4 var(--f-mono)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+</head><body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="han">街坊</span><span class="lat">Kaifong</span></div>
+    <nav id="nav">
+      <a href="#play" data-v="play">Today</a>
+      <a href="#archive" data-v="archive">Archive</a>
+      <a href="#manage" data-v="manage" id="navEd" hidden>Manage</a>
+    </nav>
+  </header>
+  <main id="app" aria-live="polite"></main>
+</div>
+<div id="toast" class="toast" hidden></div>
+
+<script>
+const TIERS={10:["Tourist","遊客"],30:["Local","本地人"],60:["Kaifong","街坊"],85:["Old Hand","老香港"],100:["One in 7.5 Million","七百五十萬分之一"]};
+const EMO={0:"⬛",10:"⬜",30:"🟩",60:"🟦",85:"🟥",100:"🟨"};
+const SECS=25, EPOCH="2026-11-01";
+const $=s=>document.querySelector(s);
+const app=$("#app");
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const hkToday=()=>new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Hong_Kong"}).format(new Date());
+const dayNo=d=>Math.round((Date.parse(d)-Date.parse(EPOCH))/864e5)+1;
+const fmtDate=d=>new Date(d+"T12:00:00Z").toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short",timeZone:"UTC"});
+const pill=t=>t?`<span class="pill t${t}">${TIERS[t][0]} · ${t}</span>`:`<span class="pill t0">No match · 0</span>`;
+function toast(m){const t=$("#toast");t.textContent=m;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2200)}
+const ls={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+/* ---------- matching ---------- */
+const SUF_EN=["country park","ferry pier","station","stn","reservoir","temple","monastery","tunnels","tunnel","bridge","hospital","beach","line","market","island","islands","district","pier"];
+const SUF_ZH=["郊野公園","水塘","醫院","隧道","大橋","碼頭","站","區","綫","線"];
+function norm(s){
+  s=String(s||"").normalize("NFKD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/線/g,"綫").replace(/&/g," and ").replace(/['’`]/g,"").replace(/\bst\b\.?/g,"street").replace(/\brd\b\.?/g,"road");
+  s=s.replace(/[^a-z0-9㐀-鿿]+/g," ").trim();
+  for(const w of SUF_EN){ if(s.endsWith(" "+w)&&s.length>w.length+2){s=s.slice(0,-w.length-1);break} }
+  s=s.replace(/ /g,"");
+  for(const w of SUF_ZH){ if(s.endsWith(w)&&s.length>w.length){s=s.slice(0,-w.length);break} }
+  return s;
+}
+function lev(a,b){if(a===b)return 0;const m=a.length,n=b.length;if(Math.abs(m-n)>2)return 9;let p=Array.from({length:n+1},(_,i)=>i);for(let i=1;i<=m;i++){const c=[i];for(let j=1;j<=n;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));p=c}return p[n]}
+function match(prompt,raw){
+  const q=norm(raw); if(!q) return null;
+  let best=null,bd=9;
+  for(const a of prompt.answers){
+    for(const k of [a.en,a.zh,...(a.aliases||[])]){
+      const kk=norm(k); if(!kk) continue;
+      if(kk===q) return a;
+      if(/^[a-z0-9]+$/.test(q)&&q.length>=5){const d=lev(q,kk),lim=q.length>=9?2:1;if(d<=lim&&d<bd){bd=d;best=a}}
+    }
+  }
+  return best;
+}
+
+/* ---------- state ---------- */
+let db=null,user=null,uid=null,canAdmin=false,canWrite=true;
+let packs={};          // date -> pack
+let packsReady=false,packsErr=null;
+let myPlays=null;      // my plays doc data
+let game=null;         // in-progress game
+let view="play";
+
+async function boot(){
+  route();
+  window.addEventListener("hashchange",route);
+  const loadTimer=setTimeout(()=>{if(!packsReady){packsErr="slow";render()}},10000);
+  try{ db=window.claude?await window.claude.use("db"):null; }catch(e){ db=null }
+  try{ user=window.claude?await window.claude.use("user"):null; }catch(e){ user=null }
+  if(!db){clearTimeout(loadTimer);
+    try{const r=await fetch("puzzles.json",{cache:"no-cache"});packs=await r.json()}catch(e){packs={}}
+    packsReady=true;packsErr=null;render();return}
+  try{uid=user?await user.id():null}catch(e){}
+  try{canAdmin=user?!!(await user.canEdit()):false}catch(e){}
+  try{const w=user?await user.can("data.write"):null; canWrite=w!==false}catch(e){}
+  $("#navEd").hidden=!canAdmin;
+  db.collection("packs").onSnapshot(s=>{
+    packs={}; s.docs.forEach(d=>packs[d.id]=d.data());
+    if(!s.metadata.fromCache){packsReady=true;packsErr=null;clearTimeout(loadTimer)}
+    else if(s.docs.length) packsReady=true;
+    if(!(view==="play"&&game&&!game.done) && view!=="manage") render();
+    if(view==="manage"&&!ed.loaded) render();
+  },e=>{clearTimeout(loadTimer);packsErr=e.code;render()});
+  if(uid){try{const d=await db.doc("plays/"+uid).get();myPlays=d.exists?d.data():{days:{}}}catch(e){myPlays={days:{}}}}
+  render();
+}
+function route(){
+  const h=(location.hash||"#play").slice(1);
+  view=["play","archive","manage"].includes(h)?h:"play";
+  if(view==="manage"&&!canAdmin&&db) view="play";
+  document.querySelectorAll("#nav a").forEach(a=>{if(a.dataset.v===view)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+  if(game&&!game.done&&view!=="play"){stopTimer()}
+  render();
+}
+function savedResult(date){ return (myPlays&&myPlays.days&&myPlays.days[date]) || ls.get("kf:"+date) }
+
+/* ---------- render ---------- */
+function render(){
+  if(view==="archive") return renderArchive();
+  if(view==="manage") return renderManage();
+  renderPlay();
+}
+function emptyState(title,body,han="收工"){app.innerHTML=`<div class="panel empty"><div class="han">${han}</div><h2>${title}</h2><p class="note">${body}</p></div>`}
+function renderPlay(dateOverride){
+  if(packsErr==="nodb") return emptyState("Sign in to play","Kaifong keeps each day's puzzle in its own store, which opens once you're signed in to claude.ai.","請登入");
+  if(!packsReady) return emptyState(packsErr==="slow"?"Still loading":"Loading today's puzzle",packsErr==="slow"?"The puzzle store isn't answering yet. Check your connection; this page keeps trying.":"Fetching the five prompts…","等車");
+  if(game&&(!dateOverride||game.date===dateOverride)) return game.done?renderResults(game.date):renderPrompt();
+  const date=dateOverride||hkToday();
+  const pack=packs[date];
+  if(!pack) {
+    const past=Object.keys(packs).filter(d=>d<=hkToday()).sort();
+    return emptyState("No puzzle set for today",past.length?`The next ride is on its way. Meanwhile, play an earlier day from the Archive.`:`No days have been published yet.${canAdmin?" Add one under Manage.":""}`,"未開車");
+  }
+  const done=savedResult(date);
+  if(done) return renderResults(date);
+  app.innerHTML=`
+  <section class="board"><div class="band"></div><div class="inner">
+    <div class="meta"><span>No. ${dayNo(date)} · ${fmtDate(date)}</span><span>${pack.prompts.length} prompts · ${SECS}s each</span></div>
+    <div class="qzh">答得愈冷門，分數愈高</div>
+    <div class="qen">Five Hong Kong prompts. Any correct answer scores, but the less obvious it is, the more it's worth.</div>
+    <div class="legend">${Object.entries(TIERS).map(([t,[en,zh]])=>`<div><span class="pill t${t}">${zh}</span><b>${t}</b>${en}</div>`).join("")}</div>
+    <div class="row"><button id="go">Start today's ride</button></div>
+  </div></section>
+  <p class="note">English, 中文 and common short forms (TST, CWB, HKU) all count. Small typos are forgiven.</p>`;
+  $("#go").onclick=()=>startGame(date);
+}
+function startGame(date){
+  game={date,i:0,picks:[],done:false,phase:"ask"};
+  view="play"; if(location.hash!=="#play") history.replaceState(null,"","#play");
+  renderPrompt();
+}
+let tmr=null,tEnd=0;
+function stopTimer(){cancelAnimationFrame(tmr);tmr=null}
+function renderPrompt(){
+  const pack=packs[game.date], p=pack.prompts[game.i];
+  if(game.phase==="ask"){
+    app.innerHTML=`
+    <section class="board"><div class="band"></div><div class="inner">
+      <div class="meta"><span>Prompt ${game.i+1} / ${pack.prompts.length}</span><span id="secs">${SECS}s</span></div>
+      <div class="timer" id="tbar"><i></i></div>
+      <div class="qzh">${esc(p.qzh)}</div>
+      <div class="qen">${esc(p.q)}</div>
+      <form class="row" id="f"><input id="ans" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type one answer"><button>Lock in</button></form>
+      <div class="row"><button class="ghost small" id="skip" type="button">Skip</button></div>
+    </div></section>`;
+    const inp=$("#ans"); inp.focus();
+    $("#f").onsubmit=e=>{e.preventDefault();submit(inp.value)};
+    $("#skip").onclick=()=>submit("");
+    tEnd=performance.now()+SECS*1000; stopTimer();
+    const bar=$("#tbar i"),lab=$("#secs"),wrap=$("#tbar");
+    const tick=()=>{const left=Math.max(0,tEnd-performance.now());bar.style.transform=`scaleX(${left/(SECS*1000)})`;lab.textContent=Math.ceil(left/1000)+"s";wrap.classList.toggle("low",left<6000);
+      if(left<=0){submit(inp.value);return} tmr=requestAnimationFrame(tick)};
+    tmr=requestAnimationFrame(tick);
+  } else {
+    const pk=game.picks[game.i], last=game.i===pack.prompts.length-1;
+    app.innerHTML=`
+    <section class="board"><div class="band"></div><div class="inner">
+      <div class="meta"><span>Prompt ${game.i+1} / ${pack.prompts.length}</span><span>Running total ${game.picks.reduce((s,x)=>s+x.tier,0)}</span></div>
+      <div class="qzh">${esc(p.qzh)}</div>
+      <div class="qen">${esc(p.q)}</div>
+      <div class="result">
+        <div class="ans">${pk.en?`${esc(pk.en)}<small>${esc(pk.zh)}</small>`:`${pk.raw?`“${esc(pk.raw)}”`:"No answer"}<small>${pk.raw?"Not on the list":"Time ran out or skipped"}</small>`}</div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px"><span class="pts">+${pk.tier}</span>${pill(pk.tier)}</div>
+      </div>
+      <div class="row"><button id="nx">${last?"See results":"Next prompt"}</button></div>
+    </div></section>`;
+    $("#nx").focus();
+    $("#nx").onclick=()=>{if(last)finish();else{game.i++;game.phase="ask";renderPrompt()}};
+  }
+}
+function submit(raw){
+  if(!game||game.phase!=="ask")return; stopTimer();
+  const p=packs[game.date].prompts[game.i], a=match(p,raw);
+  game.picks.push({p:p.id,raw:String(raw||"").trim().slice(0,80),en:a?a.en:null,zh:a?a.zh:"",tier:a?a.tier:0});
+  game.phase="show"; renderPrompt();
+}
+async function finish(){
+  game.done=true;
+  const rec={picks:game.picks,total:game.picks.reduce((s,x)=>s+x.tier,0),at:new Date().toISOString()};
+  ls.set("kf:"+game.date,rec);
+  if(myPlays){myPlays.days={...(myPlays.days||{}),[game.date]:rec}}
+  renderResults(game.date);
+  if(db&&uid&&canWrite){try{await db.doc("plays/"+uid).set({days:myPlays.days})}catch(e){if(e.code==="invalid_argument")canWrite=false}}
+}
+let community={};
+async function loadCommunity(date){
+  if(!db)return;
+  try{const s=await db.collection("plays").get();const c={};let n=0;
+    s.docs.forEach(d=>{const day=(d.data().days||{})[date];if(!day)return;n++;day.picks.forEach(pk=>{if(!pk.en)return;(c[pk.p]??={})[pk.en]=(c[pk.p][pk.en]||0)+1})});
+    community[date]={n,c}; if(view==="play"&&(!game||game.done)) paintReveal(date);
+  }catch(e){}
+}
+function renderResults(date){
+  const rec=savedResult(date)||{picks:game.picks,total:0}; const pack=packs[date];
+  const total=rec.picks.reduce((s,x)=>s+x.tier,0);
+  const share=`Kaifong 街坊 No.${dayNo(date)}  ${total}/${rec.picks.length*100}\n${rec.picks.map(x=>EMO[x.tier]??"⬛").join("")}`;
+  app.innerHTML=`
+  <section class="board"><div class="band"></div><div class="inner">
+    <div class="meta"><span>No. ${dayNo(date)} · ${fmtDate(date)}</span><span>Final</span></div>
+    <div class="score"><span class="big">${total}</span><span class="sub">/ ${rec.picks.length*100}</span></div>
+    <div class="list">${rec.picks.map((pk,i)=>{const p=pack?.prompts.find(x=>x.id===pk.p);return `<div><span class="n">${i+1}</span><span class="q"><b>${pk.en?esc(pk.en):pk.raw?"“"+esc(pk.raw)+"”":"—"}</b>${esc(p?.q||"")}</span>${pill(pk.tier)}<span class="p">${pk.tier}</span></div>`}).join("")}</div>
+    <div class="row"><button id="cp">Copy result</button><a href="#archive" class="sub" style="align-self:center">Play another day →</a></div>
+    <pre id="sh" class="sub" style="margin:0;white-space:pre-wrap">${esc(share)}</pre>
+  </div></section>
+  <section class="panel" id="rv"><h2>Every answer on the list</h2><p class="note">Grouped by tier. Numbers show how many players picked each answer.</p><div id="rvb"></div></section>`;
+  $("#cp").onclick=async()=>{try{await navigator.clipboard.writeText(share);toast("Copied")}catch(e){const r=document.createRange();r.selectNodeContents($("#sh"));const s=getSelection();s.removeAllRanges();s.addRange(r);toast("Selected. Copy it from here")}};
+  paintReveal(date); loadCommunity(date);
+}
+function paintReveal(date){
+  const box=$("#rvb"); if(!box)return; const pack=packs[date]; if(!pack){box.innerHTML="";return}
+  const cm=community[date];
+  box.innerHTML=pack.prompts.map((p,i)=>`<details ${i===0?"open":""}><summary>${i+1}. ${esc(p.q)}</summary><div class="reveal">${
+    [100,85,60,30,10].map(t=>{const as=p.answers.filter(a=>a.tier===t);if(!as.length)return"";
+      return `<div class="tier"><span class="pill t${t}">${TIERS[t][1]}</span><div class="names">${as.map(a=>{const c=cm?.c?.[p.id]?.[a.en];return `<span>${esc(a.en)} ${esc(a.zh)}${c?` <em>×${c}</em>`:""}</span>`}).join(" · ")}</div></div>`}).join("")
+  }</div></details>`).join("");
+}
+function renderArchive(){
+  if(packsErr==="nodb") return emptyState("Sign in to play","The archive opens once you're signed in to claude.ai.","請登入");
+  if(!packsReady) return emptyState("Loading","Fetching published days…","等車");
+  const t=hkToday(), days=Object.keys(packs).filter(d=>d<=t||canAdmin).sort().reverse();
+  if(!days.length) return emptyState("Nothing published yet","Published days will appear here.","未開車");
+  app.innerHTML=`<section class="panel" style="display:flex;flex-direction:column;gap:12px"><h2>Archive</h2>${canAdmin?`<p class="note">Future days are shown to you because you manage this game. Players only see days up to today.</p>`:""}
+  <div class="arch">${days.map(d=>{const r=savedResult(d);return `<button data-d="${d}"><b>No. ${dayNo(d)}${d>t?" · upcoming":""}</b><span>${fmtDate(d)}</span><span>${r?`Scored ${r.picks.reduce((s,x)=>s+x.tier,0)}`:"Not played"}</span></button>`}).join("")}</div></section>`;
+  app.querySelectorAll(".arch button").forEach(b=>b.onclick=()=>{const d=b.dataset.d;game=null;view="play";history.replaceState(null,"","#play");document.querySelectorAll("#nav a").forEach(a=>a.dataset.v==="play"?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
+    if(savedResult(d)) renderResults(d); else { const pack=packs[d]; renderPlay(d); const go=$("#go"); if(go) go.onclick=()=>startGame(d);} });
+}
+
+/* ---------- manage ---------- */
+const ed={date:null,draft:null,loaded:false,stats:null,unsub:null,dirty:false,confirmDel:false};
+function renderManage(){
+  if(!canAdmin) return emptyState("Managers only","Only editors of this page can change prompts.","閒人免進");
+  if(!packsReady) return emptyState("Loading","Fetching published days…","等車");
+  ed.loaded=true;
+  if(!ed.unsub&&db){ed.unsub=db.collection("plays").onSnapshot(s=>{ed.stats=s.docs.map(d=>d.data());if(view==="manage"&&!ed.typing)paintStats()},()=>{})}
+  const days=Object.keys(packs).sort();
+  if(!ed.date) ed.date=days.find(d=>d>=hkToday())||days[days.length-1]||hkToday();
+  if(!ed.draft||ed.draft.date!==ed.date) loadDraft(ed.date);
+  const d=ed.draft;
+  app.innerHTML=`<section class="panel ed">
+    <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:end">
+      <div style="display:flex;flex-direction:column;gap:6px"><span class="sub">DAY</span>
+        <div class="row"><select id="dsel">${[...new Set([...days,ed.date])].sort().map(x=>`<option value="${x}" ${x===ed.date?"selected":""}>No. ${dayNo(x)} · ${x}${packs[x]?"":" (new)"}</option>`).join("")}</select>
+        <input id="newd" type="date" aria-label="New day" style="width:auto"><button class="ghost" id="addd">New day</button></div></div>
+      <div class="row"><button id="save">${packs[ed.date]?"Save changes":"Publish day"}</button></div>
+    </div>
+    <p class="note">${packs[ed.date]?"Live for players on "+fmtDate(ed.date)+".":"Not published yet. Players see it once saved and the date arrives."} Answers marked <span class="warn">⚠</span> need checking against an official source.</p>
+    <div id="prompts" class="ed"></div>
+    <div class="row"><button class="ghost" id="addp">+ Add prompt</button></div>
+    <details><summary>Import or export this day as JSON</summary>
+      <p class="note" style="margin:8px 0">Paste a day's pack (the shape Claude produces each week) and press Load into editor, then Save.</p>
+      <textarea id="json" spellcheck="false">${esc(JSON.stringify({date:d.date,prompts:d.prompts},null,1))}</textarea>
+      <div class="row" style="margin-top:8px"><button class="ghost" id="imp">Load into editor</button><button class="ghost" id="exp">Copy JSON</button></div></details>
+    <details><summary>Delete this day</summary><div class="row" style="margin-top:8px">${ed.confirmDel?`<span class="note">Delete ${ed.date} for everyone?</span><button id="delyes">Delete</button><button class="ghost" id="delno">Keep</button>`:`<button class="ghost" id="del" ${packs[ed.date]?"":"disabled"}>Delete day</button>`}</div></details>
+  </section>`;
+  paintPrompts();
+  $("#dsel").onchange=e=>{if(ed.dirty&&!confirmSwitch())return;ed.date=e.target.value;ed.draft=null;ed.dirty=false;renderManage()};
+  $("#addd").onclick=()=>{const v=$("#newd").value;if(!v)return toast("Pick a date first");ed.date=v;ed.draft=null;ed.dirty=false;renderManage()};
+  $("#save").onclick=saveDay;
+  $("#addp").onclick=()=>{d.prompts.push({id:"p"+(d.prompts.length+1)+"_"+Math.random().toString(36).slice(2,5),q:"",qzh:"",answers:[]});ed.dirty=true;paintPrompts()};
+  $("#imp").onclick=()=>{try{const j=JSON.parse($("#json").value);const pr=j.prompts||j;if(!Array.isArray(pr))throw 0;d.prompts=pr.map((p,i)=>({id:p.id||"p"+(i+1),q:p.q||"",qzh:p.qzh||"",answers:(p.answers||[]).map(a=>({en:a.en||"",zh:a.zh||"",tier:+a.tier||10,aliases:a.aliases||[],...(a.check?{check:true}:{})}))}));ed.dirty=true;paintPrompts();toast("Loaded. Press Save to publish")}catch(e){toast("That isn't valid pack JSON")}};
+  $("#exp").onclick=async()=>{try{await navigator.clipboard.writeText(JSON.stringify({date:d.date,prompts:d.prompts},null,1));toast("Copied")}catch(e){$("#json").select();toast("Selected. Copy it from the box")}};
+  const del=$("#del");if(del)del.onclick=()=>{ed.confirmDel=true;renderManage()};
+  const dy=$("#delyes");if(dy)dy.onclick=async()=>{try{await db.doc("packs/"+ed.date).delete();toast("Deleted");ed.draft=null;ed.date=null}catch(e){toast("Couldn't delete: "+e.code)}ed.confirmDel=false;renderManage()};
+  const dn=$("#delno");if(dn)dn.onclick=()=>{ed.confirmDel=false;renderManage()};
+}
+function confirmSwitch(){toast("Unsaved changes discarded");return true}
+function loadDraft(date){const p=packs[date];ed.draft=p?JSON.parse(JSON.stringify(p)):{date,prompts:[]};ed.draft.date=date}
+function dayStats(date){
+  const out={n:0,pick:{},miss:{}};(ed.stats||[]).forEach(doc=>{const day=(doc.days||{})[date];if(!day)return;out.n++;
+    day.picks.forEach(pk=>{if(pk.en){(out.pick[pk.p]??={})[pk.en]=(out.pick[pk.p][pk.en]||0)+1}else if(pk.raw){const k=pk.raw.trim();(out.miss[pk.p]??={})[k]=(out.miss[pk.p][k]||0)+1}})});return out}
+function retier(share){return share>=.25?10:share>=.10?30:share>=.04?60:share>=.01?85:100}
+function paintPrompts(){
+  const box=$("#prompts"); if(!box)return; const d=ed.draft, st=dayStats(d.date);
+  box.innerHTML=d.prompts.map((p,i)=>{
+    const picks=st.pick[p.id]||{}, tot=Object.values(picks).reduce((s,x)=>s+x,0), miss=Object.entries(st.miss[p.id]||{}).sort((a,b)=>b[1]-a[1]);
+    return `<div class="board"><div class="band"></div><div class="inner" data-i="${i}">
+      <div class="meta"><span>Prompt ${i+1} · ${p.answers.length} answers</span><span>${st.n} plays</span></div>
+      <div class="grid2"><input data-f="q" value="${esc(p.q)}" placeholder="Prompt in English"><input data-f="qzh" value="${esc(p.qzh)}" placeholder="中文題目"></div>
+      <div class="tbl"><table><thead><tr><th>English</th><th>中文</th><th style="width:130px">Tier</th><th>Also accept (comma-separated)</th><th>Picked</th><th></th></tr></thead><tbody>
+      ${p.answers.map((a,j)=>`<tr data-j="${j}"><td><input data-a="en" value="${esc(a.en)}"></td><td><input data-a="zh" value="${esc(a.zh)}"></td>
+        <td><select data-a="tier">${[10,30,60,85,100].map(t=>`<option value="${t}" ${a.tier===t?"selected":""}>${t} ${TIERS[t][0]}</option>`).join("")}</select></td>
+        <td><input data-a="aliases" value="${esc((a.aliases||[]).join(", "))}"></td>
+        <td class="stat">${a.check?`<button class="ghost small" data-ok="${j}" title="Mark as checked"><span class="warn">⚠</span> ok?</button> `:""}${picks[a.en]?`${picks[a.en]} · ${Math.round(picks[a.en]/tot*100)}%`:"–"}</td>
+        <td><button class="ghost small" data-rm="${j}" aria-label="Remove ${esc(a.en)}">✕</button></td></tr>`).join("")}
+      </tbody></table></div>
+      <div class="row"><button class="ghost small" data-add="1">+ Answer</button><button class="ghost small" data-rt="1" ${tot<20?"disabled":""} title="Needs 20+ correct picks">Re-tier from plays${tot<20?` (${tot}/20)`:""}</button><button class="ghost small" data-rp="1">Remove prompt</button></div>
+      ${miss.length?`<div><span class="sub">REJECTED GUESSES · add the real ones</span><div class="chips" style="margin-top:6px">${miss.slice(0,24).map(([k,c])=>`<span class="chip">${esc(k)} <em class="sub">×${c}</em><button class="ghost" data-mk="${esc(k)}">+ add</button></span>`).join("")}</div></div>`:""}
+    </div></div>`}).join("") || `<div class="panel empty"><div class="han">空</div><p class="note">No prompts yet. Add one, or paste JSON below.</p></div>`;
+  box.querySelectorAll(".inner[data-i]").forEach(el=>{
+    const p=d.prompts[+el.dataset.i];
+    el.querySelectorAll("input[data-f]").forEach(x=>x.oninput=()=>{p[x.dataset.f]=x.value;ed.dirty=true});
+    el.querySelectorAll("tr[data-j]").forEach(tr=>{const a=p.answers[+tr.dataset.j];
+      tr.querySelectorAll("[data-a]").forEach(x=>x.oninput=x.onchange=()=>{const f=x.dataset.a;a[f]=f==="tier"?+x.value:f==="aliases"?x.value.split(",").map(s=>s.trim()).filter(Boolean):x.value;ed.dirty=true})});
+    el.querySelectorAll("[data-rm]").forEach(b=>b.onclick=()=>{p.answers.splice(+b.dataset.rm,1);ed.dirty=true;paintPrompts()});
+    el.querySelectorAll("[data-ok]").forEach(b=>b.onclick=()=>{delete p.answers[+b.dataset.ok].check;ed.dirty=true;paintPrompts()});
+    el.querySelector("[data-add]").onclick=()=>{p.answers.push({en:"",zh:"",tier:60,aliases:[]});ed.dirty=true;paintPrompts()};
+    el.querySelector("[data-rp]").onclick=()=>{d.prompts.splice(+el.dataset.i,1);ed.dirty=true;paintPrompts()};
+    el.querySelectorAll("[data-mk]").forEach(b=>b.onclick=()=>{p.answers.push({en:b.dataset.mk,zh:"",tier:100,aliases:[],check:true});ed.dirty=true;paintPrompts();toast("Added at tier 100. Adjust and save")});
+    el.querySelector("[data-rt]").onclick=()=>{const pk=dayStats(d.date).pick[p.id]||{},tot=Object.values(pk).reduce((s,x)=>s+x,0);let ch=0;
+      p.answers.forEach(a=>{if(pk[a.en]){const t=retier(pk[a.en]/tot);if(t!==a.tier){a.tier=t;ch++}}});ed.dirty=true;paintPrompts();toast(`${ch} tier${ch===1?"":"s"} changed. Save to apply`)};
+  });
+}
+function paintStats(){ if(document.activeElement&&document.activeElement.closest("#prompts"))return; paintPrompts() }
+async function saveDay(){
+  const d=ed.draft; if(!d.prompts.length) return toast("Add at least one prompt");
+  const bad=d.prompts.findIndex(p=>!p.q.trim()||!p.answers.some(a=>a.en.trim()));
+  if(bad>=0) return toast(`Prompt ${bad+1} needs a question and at least one answer`);
+  d.prompts.forEach(p=>p.answers=p.answers.filter(a=>a.en.trim()));
+  try{await db.doc("packs/"+d.date).set({date:d.date,prompts:d.prompts});ed.dirty=false;toast("Saved");renderManage()}
+  catch(e){toast(e.code==="invalid_argument"?"Only editors can save":"Couldn't save: "+e.code)}
+}
+boot();
+</script>
+
+</body></html>

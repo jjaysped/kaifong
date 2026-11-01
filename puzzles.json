@@ -1,0 +1,5810 @@
+{
+ "2026-11-01": {
+  "date": "2026-11-01",
+  "prompts": [
+   {
+    "q": "Name an MTR station on the Island Line",
+    "qzh": "說出一個港島綫車站",
+    "answers": [
+     {
+      "en": "Central",
+      "zh": "中環",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Causeway Bay",
+      "zh": "銅鑼灣",
+      "tier": 10,
+      "aliases": [
+       "CWB"
+      ]
+     },
+     {
+      "en": "Admiralty",
+      "zh": "金鐘",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Wan Chai",
+      "zh": "灣仔",
+      "tier": 30,
+      "aliases": [
+       "Wanchai"
+      ]
+     },
+     {
+      "en": "North Point",
+      "zh": "北角",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Sheung Wan",
+      "zh": "上環",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Kennedy Town",
+      "zh": "堅尼地城",
+      "tier": 30,
+      "aliases": [
+       "KTown",
+       "K Town"
+      ]
+     },
+     {
+      "en": "Quarry Bay",
+      "zh": "鰂魚涌",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tai Koo",
+      "zh": "太古",
+      "tier": 60,
+      "aliases": [
+       "Taikoo"
+      ]
+     },
+     {
+      "en": "Tin Hau",
+      "zh": "天后",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Sai Ying Pun",
+      "zh": "西營盤",
+      "tier": 60,
+      "aliases": [
+       "SYP"
+      ]
+     },
+     {
+      "en": "HKU",
+      "zh": "香港大學",
+      "tier": 60,
+      "aliases": [
+       "Hong Kong University",
+       "University of Hong Kong"
+      ]
+     },
+     {
+      "en": "Shau Kei Wan",
+      "zh": "筲箕灣",
+      "tier": 60,
+      "aliases": [
+       "Shaukeiwan"
+      ]
+     },
+     {
+      "en": "Chai Wan",
+      "zh": "柴灣",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Fortress Hill",
+      "zh": "炮台山",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Sai Wan Ho",
+      "zh": "西灣河",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Heng Fa Chuen",
+      "zh": "杏花邨",
+      "tier": 100,
+      "aliases": [
+       "HFC"
+      ]
+     }
+    ],
+    "id": "p1"
+   },
+   {
+    "q": "Name one of Hong Kong's 18 districts",
+    "qzh": "說出香港十八區之一",
+    "answers": [
+     {
+      "en": "Wan Chai",
+      "zh": "灣仔區",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Sha Tin",
+      "zh": "沙田區",
+      "tier": 10,
+      "aliases": [
+       "Shatin"
+      ]
+     },
+     {
+      "en": "Central and Western",
+      "zh": "中西區",
+      "tier": 30,
+      "aliases": [
+       "Central & Western",
+       "Central Western"
+      ]
+     },
+     {
+      "en": "Yau Tsim Mong",
+      "zh": "油尖旺區",
+      "tier": 30,
+      "aliases": [
+       "YTM"
+      ]
+     },
+     {
+      "en": "Kowloon City",
+      "zh": "九龍城區",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Kwun Tong",
+      "zh": "觀塘區",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Sham Shui Po",
+      "zh": "深水埗區",
+      "tier": 30,
+      "aliases": [
+       "SSP"
+      ]
+     },
+     {
+      "en": "Tuen Mun",
+      "zh": "屯門區",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Yuen Long",
+      "zh": "元朗區",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tsuen Wan",
+      "zh": "荃灣區",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Wong Tai Sin",
+      "zh": "黃大仙區",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tai Po",
+      "zh": "大埔區",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Sai Kung",
+      "zh": "西貢區",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Eastern",
+      "zh": "東區",
+      "tier": 60,
+      "aliases": [
+       "Eastern District"
+      ]
+     },
+     {
+      "en": "Southern",
+      "zh": "南區",
+      "tier": 85,
+      "aliases": [
+       "Southern District"
+      ]
+     },
+     {
+      "en": "Islands",
+      "zh": "離島區",
+      "tier": 85,
+      "aliases": [
+       "Islands District",
+       "Outlying Islands"
+      ]
+     },
+     {
+      "en": "North",
+      "zh": "北區",
+      "tier": 85,
+      "aliases": [
+       "North District"
+      ]
+     },
+     {
+      "en": "Kwai Tsing",
+      "zh": "葵青區",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p2"
+   },
+   {
+    "q": "Name a Hong Kong island (not Hong Kong Island itself)",
+    "qzh": "說出一個香港島嶼（香港島除外）",
+    "answers": [
+     {
+      "en": "Lantau",
+      "zh": "大嶼山",
+      "tier": 10,
+      "aliases": [
+       "Lantau Island",
+       "Tai Yue Shan"
+      ]
+     },
+     {
+      "en": "Lamma",
+      "zh": "南丫島",
+      "tier": 10,
+      "aliases": [
+       "Lamma Island"
+      ]
+     },
+     {
+      "en": "Cheung Chau",
+      "zh": "長洲",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Peng Chau",
+      "zh": "坪洲",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Ap Lei Chau",
+      "zh": "鴨脷洲",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tsing Yi",
+      "zh": "青衣",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Ma Wan",
+      "zh": "馬灣",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Po Toi",
+      "zh": "蒲台島",
+      "tier": 60,
+      "aliases": [
+       "Po Toi Island"
+      ]
+     },
+     {
+      "en": "Tung Lung Chau",
+      "zh": "東龍洲",
+      "tier": 60,
+      "aliases": [
+       "Tung Lung Island"
+      ]
+     },
+     {
+      "en": "Chek Lap Kok",
+      "zh": "赤鱲角",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tung Ping Chau",
+      "zh": "東平洲",
+      "tier": 60,
+      "aliases": [
+       "Ping Chau"
+      ]
+     },
+     {
+      "en": "Kat O",
+      "zh": "吉澳",
+      "tier": 85,
+      "aliases": [
+       "Crooked Island"
+      ]
+     },
+     {
+      "en": "Tap Mun",
+      "zh": "塔門",
+      "tier": 85,
+      "aliases": [
+       "Grass Island"
+      ]
+     },
+     {
+      "en": "Stonecutters Island",
+      "zh": "昂船洲",
+      "tier": 85,
+      "aliases": [
+       "Stonecutters",
+       "Ngong Shuen Chau"
+      ]
+     },
+     {
+      "en": "Sharp Island",
+      "zh": "橋咀洲",
+      "tier": 85,
+      "aliases": [
+       "Kiu Tsui Chau"
+      ]
+     },
+     {
+      "en": "Yim Tin Tsai",
+      "zh": "鹽田梓",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Kau Sai Chau",
+      "zh": "滘西洲",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Hei Ling Chau",
+      "zh": "喜靈洲",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Ap Chau",
+      "zh": "鴨洲",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Sunshine Island",
+      "zh": "周公島",
+      "tier": 100,
+      "aliases": [
+       "Chau Kung To"
+      ]
+     },
+     {
+      "en": "Kau Yi Chau",
+      "zh": "交椅洲",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Green Island",
+      "zh": "青洲",
+      "tier": 100,
+      "aliases": [
+       "Tsing Chau"
+      ]
+     },
+     {
+      "en": "Waglan Island",
+      "zh": "橫瀾島",
+      "tier": 100,
+      "aliases": [
+       "Waglan"
+      ]
+     },
+     {
+      "en": "High Island",
+      "zh": "糧船灣洲",
+      "tier": 100,
+      "aliases": [
+       "Leung Shuen Wan Chau"
+      ]
+     },
+     {
+      "en": "Basalt Island",
+      "zh": "火石洲",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Soko Islands",
+      "zh": "索罟群島",
+      "tier": 100,
+      "aliases": [
+       "Soko"
+      ]
+     },
+     {
+      "en": "Ninepin Group",
+      "zh": "果洲群島",
+      "tier": 100,
+      "aliases": [
+       "Ninepins",
+       "Ninepin"
+      ]
+     }
+    ],
+    "id": "p3"
+   },
+   {
+    "q": "Name a Hong Kong country park",
+    "qzh": "說出一個香港郊野公園",
+    "answers": [
+     {
+      "en": "Sai Kung East",
+      "zh": "西貢東郊野公園",
+      "tier": 10,
+      "aliases": [
+       "Sai Kung East Country Park"
+      ]
+     },
+     {
+      "en": "Lion Rock",
+      "zh": "獅子山郊野公園",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Tai Mo Shan",
+      "zh": "大帽山郊野公園",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Shing Mun",
+      "zh": "城門郊野公園",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Sai Kung West",
+      "zh": "西貢西郊野公園",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Ma On Shan",
+      "zh": "馬鞍山郊野公園",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Lantau South",
+      "zh": "南大嶼郊野公園",
+      "tier": 30,
+      "aliases": [
+       "South Lantau"
+      ]
+     },
+     {
+      "en": "Aberdeen",
+      "zh": "香港仔郊野公園",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tai Tam",
+      "zh": "大潭郊野公園",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Lantau North",
+      "zh": "北大嶼郊野公園",
+      "tier": 60,
+      "aliases": [
+       "North Lantau"
+      ]
+     },
+     {
+      "en": "Plover Cove",
+      "zh": "船灣郊野公園",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Pat Sin Leng",
+      "zh": "八仙嶺郊野公園",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Clear Water Bay",
+      "zh": "清水灣郊野公園",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Shek O",
+      "zh": "石澳郊野公園",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tai Lam",
+      "zh": "大欖郊野公園",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Kam Shan",
+      "zh": "金山郊野公園",
+      "tier": 85,
+      "aliases": [
+       "Monkey Hill"
+      ]
+     },
+     {
+      "en": "Pok Fu Lam",
+      "zh": "薄扶林郊野公園",
+      "tier": 85,
+      "aliases": [
+       "Pokfulam"
+      ]
+     },
+     {
+      "en": "Lam Tsuen",
+      "zh": "林村郊野公園",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Lung Fu Shan",
+      "zh": "龍虎山郊野公園",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Kiu Tsui",
+      "zh": "橋咀郊野公園",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Robin's Nest",
+      "zh": "紅花嶺郊野公園",
+      "tier": 100,
+      "aliases": [
+       "Hung Fa Leng"
+      ]
+     }
+    ],
+    "id": "p4"
+   },
+   {
+    "q": "Name a Hong Kong hill or peak",
+    "qzh": "說出一座香港山峰",
+    "answers": [
+     {
+      "en": "Victoria Peak",
+      "zh": "太平山",
+      "tier": 10,
+      "aliases": [
+       "The Peak",
+       "Peak",
+       "Mount Austin"
+      ]
+     },
+     {
+      "en": "Lion Rock",
+      "zh": "獅子山",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Tai Mo Shan",
+      "zh": "大帽山",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Lantau Peak",
+      "zh": "鳳凰山",
+      "tier": 30,
+      "aliases": [
+       "Fung Wong Shan"
+      ]
+     },
+     {
+      "en": "Ma On Shan",
+      "zh": "馬鞍山",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Sunset Peak",
+      "zh": "大東山",
+      "tier": 30,
+      "aliases": [
+       "Tai Tung Shan"
+      ]
+     },
+     {
+      "en": "Dragon's Back",
+      "zh": "龍脊",
+      "tier": 30,
+      "aliases": [
+       "Dragons Back"
+      ]
+     },
+     {
+      "en": "Kowloon Peak",
+      "zh": "飛鵝山",
+      "tier": 60,
+      "aliases": [
+       "Fei Ngo Shan"
+      ]
+     },
+     {
+      "en": "Sharp Peak",
+      "zh": "蚺蛇尖",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Castle Peak",
+      "zh": "青山",
+      "tier": 60,
+      "aliases": [
+       "Tsing Shan"
+      ]
+     },
+     {
+      "en": "Pat Sin Leng",
+      "zh": "八仙嶺",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Devil's Peak",
+      "zh": "魔鬼山",
+      "tier": 60,
+      "aliases": [
+       "Devils Peak"
+      ]
+     },
+     {
+      "en": "Needle Hill",
+      "zh": "針山",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Mount Parker",
+      "zh": "柏架山",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Jardine's Lookout",
+      "zh": "渣甸山",
+      "tier": 85,
+      "aliases": [
+       "Jardines Lookout"
+      ]
+     },
+     {
+      "en": "Violet Hill",
+      "zh": "紫羅蘭山",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Beacon Hill",
+      "zh": "筆架山",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Tate's Cairn",
+      "zh": "大老山",
+      "tier": 85,
+      "aliases": [
+       "Tates Cairn"
+      ]
+     },
+     {
+      "en": "Grassy Hill",
+      "zh": "草山",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Tai To Yan",
+      "zh": "大刀屻",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Mount Cameron",
+      "zh": "金馬倫山",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Mount Nicholson",
+      "zh": "聶高信山",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Mount Butler",
+      "zh": "畢拿山",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Kai Kung Shan",
+      "zh": "雞公山",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "High West",
+      "zh": "西高山",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Mount Davis",
+      "zh": "摩星嶺",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p5"
+   }
+  ]
+ },
+ "2026-11-02": {
+  "date": "2026-11-02",
+  "prompts": [
+   {
+    "q": "Name an MTR station on the Tsuen Wan Line",
+    "qzh": "說出一個荃灣綫車站",
+    "answers": [
+     {
+      "en": "Mong Kok",
+      "zh": "旺角",
+      "tier": 10,
+      "aliases": [
+       "Mongkok",
+       "MK"
+      ]
+     },
+     {
+      "en": "Tsim Sha Tsui",
+      "zh": "尖沙咀",
+      "tier": 10,
+      "aliases": [
+       "TST"
+      ]
+     },
+     {
+      "en": "Central",
+      "zh": "中環",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Tsuen Wan",
+      "zh": "荃灣",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Admiralty",
+      "zh": "金鐘",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Jordan",
+      "zh": "佐敦",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Yau Ma Tei",
+      "zh": "油麻地",
+      "tier": 30,
+      "aliases": [
+       "YMT"
+      ]
+     },
+     {
+      "en": "Prince Edward",
+      "zh": "太子",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Sham Shui Po",
+      "zh": "深水埗",
+      "tier": 30,
+      "aliases": [
+       "SSP"
+      ]
+     },
+     {
+      "en": "Mei Foo",
+      "zh": "美孚",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Lai Chi Kok",
+      "zh": "荔枝角",
+      "tier": 60,
+      "aliases": [
+       "LCK"
+      ]
+     },
+     {
+      "en": "Cheung Sha Wan",
+      "zh": "長沙灣",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Kwai Fong",
+      "zh": "葵芳",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Lai King",
+      "zh": "荔景",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Kwai Hing",
+      "zh": "葵興",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Tai Wo Hau",
+      "zh": "大窩口",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p1"
+   },
+   {
+    "q": "Name a Hong Kong beach",
+    "qzh": "說出一個香港泳灘",
+    "answers": [
+     {
+      "en": "Repulse Bay",
+      "zh": "淺水灣",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Shek O",
+      "zh": "石澳",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Big Wave Bay",
+      "zh": "大浪灣",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Stanley Main Beach",
+      "zh": "赤柱正灘",
+      "tier": 30,
+      "aliases": [
+       "Stanley"
+      ]
+     },
+     {
+      "en": "Deep Water Bay",
+      "zh": "深水灣",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Golden Beach",
+      "zh": "黃金泳灘",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Clear Water Bay",
+      "zh": "清水灣",
+      "tier": 30,
+      "aliases": [
+       "Clearwater Bay"
+      ]
+     },
+     {
+      "en": "Silverstrand",
+      "zh": "銀線灣",
+      "tier": 60,
+      "aliases": [
+       "Silver Strand"
+      ]
+     },
+     {
+      "en": "Cheung Sha",
+      "zh": "長沙",
+      "tier": 60,
+      "aliases": [
+       "Cheung Sha Beach"
+      ]
+     },
+     {
+      "en": "Pui O",
+      "zh": "貝澳",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tung Wan",
+      "zh": "東灣",
+      "tier": 60,
+      "aliases": [
+       "Tung Wan Beach"
+      ]
+     },
+     {
+      "en": "Hung Shing Yeh",
+      "zh": "洪聖爺",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Silver Mine Bay",
+      "zh": "銀礦灣",
+      "tier": 60,
+      "aliases": [
+       "Mui Wo Beach"
+      ]
+     },
+     {
+      "en": "Ham Tin",
+      "zh": "鹹田灣",
+      "tier": 60,
+      "aliases": [
+       "Ham Tin Wan"
+      ]
+     },
+     {
+      "en": "Tai Wan",
+      "zh": "大灣",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Middle Bay",
+      "zh": "中灣",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "South Bay",
+      "zh": "南灣",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Turtle Cove",
+      "zh": "龜背灣",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Chung Hom Kok",
+      "zh": "舂坎角",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Hap Mun Bay",
+      "zh": "半月灣",
+      "tier": 85,
+      "aliases": [
+       "Half Moon Bay"
+      ]
+     },
+     {
+      "en": "Trio Beach",
+      "zh": "廈門灣",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Tong Fuk",
+      "zh": "塘福",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Castle Peak Bay",
+      "zh": "青山灣",
+      "tier": 85,
+      "aliases": [
+       "Castle Peak Beach"
+      ]
+     },
+     {
+      "en": "Butterfly Beach",
+      "zh": "蝴蝶灣",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Kadoorie Beach",
+      "zh": "嘉道理",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Ting Kau",
+      "zh": "汀九",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Lo So Shing",
+      "zh": "蘆鬚城",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Kwun Yam Beach",
+      "zh": "觀音灣",
+      "tier": 100,
+      "aliases": [
+       "Kwun Yam Wan"
+      ]
+     },
+     {
+      "en": "Tai Pak Beach",
+      "zh": "大白灣",
+      "tier": 100,
+      "aliases": [
+       "Tai Pak Wan"
+      ]
+     },
+     {
+      "en": "Lido Beach",
+      "zh": "麗都",
+      "tier": 100,
+      "aliases": [
+       "Lido"
+      ]
+     },
+     {
+      "en": "Sai Wan",
+      "zh": "西灣",
+      "tier": 100,
+      "aliases": [
+       "Tai Long Sai Wan"
+      ]
+     }
+    ],
+    "id": "p2"
+   },
+   {
+    "q": "Name a Hong Kong temple or monastery",
+    "qzh": "說出一間香港廟宇或寺院",
+    "answers": [
+     {
+      "en": "Wong Tai Sin Temple",
+      "zh": "黃大仙祠",
+      "tier": 10,
+      "aliases": [
+       "Wong Tai Sin",
+       "Sik Sik Yuen"
+      ]
+     },
+     {
+      "en": "Man Mo Temple",
+      "zh": "文武廟",
+      "tier": 10,
+      "aliases": [
+       "Man Mo"
+      ]
+     },
+     {
+      "en": "Po Lin Monastery",
+      "zh": "寶蓮寺",
+      "tier": 10,
+      "aliases": [
+       "Po Lin",
+       "Big Buddha",
+       "Tian Tan Buddha"
+      ]
+     },
+     {
+      "en": "Che Kung Temple",
+      "zh": "車公廟",
+      "tier": 30,
+      "aliases": [
+       "Che Kung"
+      ]
+     },
+     {
+      "en": "Chi Lin Nunnery",
+      "zh": "志蓮淨苑",
+      "tier": 30,
+      "aliases": [
+       "Chi Lin"
+      ]
+     },
+     {
+      "en": "Tin Hau Temple",
+      "zh": "天后廟",
+      "tier": 30,
+      "aliases": [
+       "Tin Hau"
+      ]
+     },
+     {
+      "en": "Ten Thousand Buddhas Monastery",
+      "zh": "萬佛寺",
+      "tier": 30,
+      "aliases": [
+       "10000 Buddhas",
+       "Ten Thousand Buddhas"
+      ]
+     },
+     {
+      "en": "Tsz Shan Monastery",
+      "zh": "慈山寺",
+      "tier": 60,
+      "aliases": [
+       "Tsz Shan"
+      ]
+     },
+     {
+      "en": "Pak Tai Temple",
+      "zh": "北帝廟",
+      "tier": 60,
+      "aliases": [
+       "Pak Tai"
+      ]
+     },
+     {
+      "en": "Hung Shing Temple",
+      "zh": "洪聖古廟",
+      "tier": 60,
+      "aliases": [
+       "Hung Shing"
+      ]
+     },
+     {
+      "en": "Western Monastery",
+      "zh": "西方寺",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Yuen Yuen Institute",
+      "zh": "圓玄學院",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Lin Fa Temple",
+      "zh": "蓮花宮",
+      "tier": 85,
+      "aliases": [
+       "Lin Fa Kung"
+      ]
+     },
+     {
+      "en": "Tsing Shan Monastery",
+      "zh": "青山禪院",
+      "tier": 85,
+      "aliases": [
+       "Castle Peak Monastery"
+      ]
+     },
+     {
+      "en": "Tam Kung Temple",
+      "zh": "譚公廟",
+      "tier": 85,
+      "aliases": [
+       "Tam Kung"
+      ]
+     },
+     {
+      "en": "Fung Ying Seen Koon",
+      "zh": "蓬瀛仙館",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Kwun Yam Temple",
+      "zh": "觀音廟",
+      "tier": 85,
+      "aliases": [
+       "Kwun Yum Temple"
+      ]
+     },
+     {
+      "en": "Hau Wong Temple",
+      "zh": "侯王廟",
+      "tier": 100,
+      "aliases": [
+       "Hau Wong"
+      ]
+     },
+     {
+      "en": "Tung Lin Kok Yuen",
+      "zh": "東蓮覺苑",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p3"
+   },
+   {
+    "q": "Name a Hong Kong road tunnel",
+    "qzh": "說出一條香港行車隧道",
+    "answers": [
+     {
+      "en": "Cross-Harbour Tunnel",
+      "zh": "海底隧道",
+      "tier": 10,
+      "aliases": [
+       "Cross Harbour Tunnel",
+       "Hung Hom Tunnel",
+       "CHT"
+      ]
+     },
+     {
+      "en": "Lion Rock Tunnel",
+      "zh": "獅子山隧道",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Western Harbour Crossing",
+      "zh": "西區海底隧道",
+      "tier": 10,
+      "aliases": [
+       "Western Harbour Tunnel",
+       "WHC"
+      ]
+     },
+     {
+      "en": "Eastern Harbour Crossing",
+      "zh": "東區海底隧道",
+      "tier": 30,
+      "aliases": [
+       "Eastern Harbour Tunnel",
+       "EHC"
+      ]
+     },
+     {
+      "en": "Aberdeen Tunnel",
+      "zh": "香港仔隧道",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tate's Cairn Tunnel",
+      "zh": "大老山隧道",
+      "tier": 30,
+      "aliases": [
+       "Tates Cairn Tunnel"
+      ]
+     },
+     {
+      "en": "Shing Mun Tunnels",
+      "zh": "城門隧道",
+      "tier": 30,
+      "aliases": [
+       "Shing Mun Tunnel"
+      ]
+     },
+     {
+      "en": "Tai Lam Tunnel",
+      "zh": "大欖隧道",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tseung Kwan O Tunnel",
+      "zh": "將軍澳隧道",
+      "tier": 30,
+      "aliases": [
+       "TKO Tunnel"
+      ]
+     },
+     {
+      "en": "Central–Wan Chai Bypass",
+      "zh": "中環灣仔繞道",
+      "tier": 60,
+      "aliases": [
+       "Central Wan Chai Bypass",
+       "Central Wanchai Bypass"
+      ]
+     },
+     {
+      "en": "Eagle's Nest Tunnel",
+      "zh": "尖山隧道",
+      "tier": 60,
+      "aliases": [
+       "Eagles Nest Tunnel"
+      ]
+     },
+     {
+      "en": "Tuen Mun–Chek Lap Kok Tunnel",
+      "zh": "屯門至赤鱲角隧道",
+      "tier": 60,
+      "aliases": [
+       "Tuen Mun Chek Lap Kok Tunnel",
+       "TM-CLK Tunnel"
+      ]
+     },
+     {
+      "en": "Tseung Kwan O–Lam Tin Tunnel",
+      "zh": "將軍澳藍田隧道",
+      "tier": 60,
+      "aliases": [
+       "Tseung Kwan O Lam Tin Tunnel",
+       "TKO Lam Tin Tunnel"
+      ]
+     },
+     {
+      "en": "Kai Tak Tunnel",
+      "zh": "啟德隧道",
+      "tier": 85,
+      "aliases": [
+       "Airport Tunnel"
+      ]
+     },
+     {
+      "en": "Discovery Bay Tunnel",
+      "zh": "愉景灣隧道",
+      "tier": 85,
+      "aliases": [
+       "DB Tunnel"
+      ]
+     },
+     {
+      "en": "Nam Wan Tunnel",
+      "zh": "南灣隧道",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Cheung Tsing Tunnel",
+      "zh": "長青隧道",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Scenic Hill Tunnel",
+      "zh": "觀景山隧道",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Lung Shan Tunnel",
+      "zh": "龍山隧道",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Cheung Shan Tunnel",
+      "zh": "長山隧道",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p4"
+   },
+   {
+    "q": "Name a Hong Kong place with 灣 (Wan / Bay) in its Chinese name",
+    "qzh": "說出一個中文名有「灣」字的香港地方",
+    "answers": [
+     {
+      "en": "Causeway Bay",
+      "zh": "銅鑼灣",
+      "tier": 10,
+      "aliases": [
+       "CWB"
+      ]
+     },
+     {
+      "en": "Wan Chai",
+      "zh": "灣仔",
+      "tier": 10,
+      "aliases": [
+       "Wanchai"
+      ]
+     },
+     {
+      "en": "Tsuen Wan",
+      "zh": "荃灣",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Repulse Bay",
+      "zh": "淺水灣",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Chai Wan",
+      "zh": "柴灣",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Kowloon Bay",
+      "zh": "九龍灣",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Shau Kei Wan",
+      "zh": "筲箕灣",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Clear Water Bay",
+      "zh": "清水灣",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Deep Water Bay",
+      "zh": "深水灣",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Cheung Sha Wan",
+      "zh": "長沙灣",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "To Kwa Wan",
+      "zh": "土瓜灣",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Discovery Bay",
+      "zh": "愉景灣",
+      "tier": 30,
+      "aliases": [
+       "DB",
+       "Disco Bay"
+      ]
+     },
+     {
+      "en": "Sai Wan Ho",
+      "zh": "西灣河",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Siu Sai Wan",
+      "zh": "小西灣",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Ngau Chi Wan",
+      "zh": "牛池灣",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Ma Wan",
+      "zh": "馬灣",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Big Wave Bay",
+      "zh": "大浪灣",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Hung Hom Bay",
+      "zh": "紅磡灣",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Silverstrand",
+      "zh": "銀線灣",
+      "tier": 85,
+      "aliases": [
+       "Silver Strand"
+      ]
+     },
+     {
+      "en": "Yung Shue Wan",
+      "zh": "榕樹灣",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Sok Kwu Wan",
+      "zh": "索罟灣",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Tai Tam Bay",
+      "zh": "大潭灣",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Castle Peak Bay",
+      "zh": "青山灣",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Butterfly Beach",
+      "zh": "蝴蝶灣",
+      "tier": 85,
+      "aliases": [
+       "Butterfly Bay"
+      ]
+     },
+     {
+      "en": "Pak Sha Wan",
+      "zh": "白沙灣",
+      "tier": 100,
+      "aliases": [
+       "Hebe Haven"
+      ]
+     },
+     {
+      "en": "Tai Pak Wan",
+      "zh": "大白灣",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Ham Tin Wan",
+      "zh": "鹹田灣",
+      "tier": 100,
+      "aliases": [
+       "Ham Tin"
+      ]
+     },
+     {
+      "en": "Tung Wan",
+      "zh": "東灣",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Siu Ho Wan",
+      "zh": "小蠔灣",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Chi Ma Wan",
+      "zh": "芝麻灣",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Sham Wan",
+      "zh": "深灣",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p5"
+   }
+  ]
+ },
+ "2026-11-03": {
+  "date": "2026-11-03",
+  "prompts": [
+   {
+    "q": "Name an MTR station on the Tuen Ma Line",
+    "qzh": "說出一個屯馬綫車站",
+    "answers": [
+     {
+      "en": "Tuen Mun",
+      "zh": "屯門",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Yuen Long",
+      "zh": "元朗",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Hung Hom",
+      "zh": "紅磡",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Tai Wai",
+      "zh": "大圍",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Ma On Shan",
+      "zh": "馬鞍山",
+      "tier": 30,
+      "aliases": [
+       "MOS"
+      ]
+     },
+     {
+      "en": "Diamond Hill",
+      "zh": "鑽石山",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tin Shui Wai",
+      "zh": "天水圍",
+      "tier": 30,
+      "aliases": [
+       "TSW"
+      ]
+     },
+     {
+      "en": "Kai Tak",
+      "zh": "啟德",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Mei Foo",
+      "zh": "美孚",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "East Tsim Sha Tsui",
+      "zh": "尖東",
+      "tier": 30,
+      "aliases": [
+       "Tsim Sha Tsui East",
+       "TST East"
+      ]
+     },
+     {
+      "en": "Austin",
+      "zh": "柯士甸",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Nam Cheong",
+      "zh": "南昌",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Wu Kai Sha",
+      "zh": "烏溪沙",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Che Kung Temple",
+      "zh": "車公廟",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "City One",
+      "zh": "第一城",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "To Kwa Wan",
+      "zh": "土瓜灣",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Ho Man Tin",
+      "zh": "何文田",
+      "tier": 60,
+      "aliases": [
+       "Homantin"
+      ]
+     },
+     {
+      "en": "Tsuen Wan West",
+      "zh": "荃灣西",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Sha Tin Wai",
+      "zh": "沙田圍",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Shek Mun",
+      "zh": "石門",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Tai Shui Hang",
+      "zh": "大水坑",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Heng On",
+      "zh": "恆安",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Sung Wong Toi",
+      "zh": "宋皇臺",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Siu Hong",
+      "zh": "兆康",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Long Ping",
+      "zh": "朗屏",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Hin Keng",
+      "zh": "顯徑",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Kam Sheung Road",
+      "zh": "錦上路",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p1"
+   },
+   {
+    "q": "Name a Hong Kong street or road",
+    "qzh": "說出一條香港街道",
+    "answers": [
+     {
+      "en": "Nathan Road",
+      "zh": "彌敦道",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Queen's Road Central",
+      "zh": "皇后大道中",
+      "tier": 10,
+      "aliases": [
+       "Queens Road Central",
+       "Queen's Road",
+       "Queens Road"
+      ]
+     },
+     {
+      "en": "Temple Street",
+      "zh": "廟街",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Canton Road",
+      "zh": "廣東道",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Hennessy Road",
+      "zh": "軒尼詩道",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Des Voeux Road",
+      "zh": "德輔道",
+      "tier": 30,
+      "aliases": [
+       "Des Voeux Road Central"
+      ]
+     },
+     {
+      "en": "Hollywood Road",
+      "zh": "荷李活道",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Lockhart Road",
+      "zh": "駱克道",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Argyle Street",
+      "zh": "亞皆老街",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Sai Yeung Choi Street",
+      "zh": "西洋菜街",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tung Choi Street",
+      "zh": "通菜街",
+      "tier": 30,
+      "aliases": [
+       "Ladies Street"
+      ]
+     },
+     {
+      "en": "Connaught Road",
+      "zh": "干諾道",
+      "tier": 30,
+      "aliases": [
+       "Connaught Road Central"
+      ]
+     },
+     {
+      "en": "Gloucester Road",
+      "zh": "告士打道",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "King's Road",
+      "zh": "英皇道",
+      "tier": 30,
+      "aliases": [
+       "Kings Road"
+      ]
+     },
+     {
+      "en": "Prince Edward Road",
+      "zh": "太子道",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Apliu Street",
+      "zh": "鴨寮街",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Fa Yuen Street",
+      "zh": "花園街",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Haiphong Road",
+      "zh": "海防道",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Granville Road",
+      "zh": "加連威老道",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Kimberley Road",
+      "zh": "金巴利道",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Boundary Street",
+      "zh": "界限街",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Harcourt Road",
+      "zh": "夏慤道",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Wyndham Street",
+      "zh": "雲咸街",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "D'Aguilar Street",
+      "zh": "德己立街",
+      "tier": 60,
+      "aliases": [
+       "DAguilar Street"
+      ]
+     },
+     {
+      "en": "Shanghai Street",
+      "zh": "上海街",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Electric Road",
+      "zh": "電氣道",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Java Road",
+      "zh": "渣華道",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Chun Yeung Street",
+      "zh": "春秧街",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Pottinger Street",
+      "zh": "砵典乍街",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Graham Street",
+      "zh": "嘉咸街",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Lyndhurst Terrace",
+      "zh": "擺花街",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Peel Street",
+      "zh": "卑利街",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Wing Lok Street",
+      "zh": "永樂街",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Bonham Strand",
+      "zh": "文咸街",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Reclamation Street",
+      "zh": "新填地街",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Ki Lung Street",
+      "zh": "基隆街",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Ladder Street",
+      "zh": "樓梯街",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Bowring Street",
+      "zh": "寶靈街",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Gage Street",
+      "zh": "結志街",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Aberdeen Street",
+      "zh": "鴨巴甸街",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Possession Street",
+      "zh": "水坑口街",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Upper Lascar Row",
+      "zh": "摩羅上街",
+      "tier": 100,
+      "aliases": [
+       "Cat Street"
+      ]
+     }
+    ],
+    "id": "p2"
+   },
+   {
+    "q": "Name one of Hong Kong's reservoirs",
+    "qzh": "說出一個香港水塘",
+    "answers": [
+     {
+      "en": "Plover Cove Reservoir",
+      "zh": "船灣淡水湖",
+      "tier": 10,
+      "aliases": [
+       "Plover Cove"
+      ]
+     },
+     {
+      "en": "High Island Reservoir",
+      "zh": "萬宜水庫",
+      "tier": 10,
+      "aliases": [
+       "High Island"
+      ]
+     },
+     {
+      "en": "Shing Mun Reservoir",
+      "zh": "城門水塘",
+      "tier": 10,
+      "aliases": [
+       "Shing Mun",
+       "Jubilee Reservoir"
+      ]
+     },
+     {
+      "en": "Tai Tam Reservoir",
+      "zh": "大潭水塘",
+      "tier": 30,
+      "aliases": [
+       "Tai Tam",
+       "Tai Tam Upper Reservoir",
+       "Upper Tai Tam"
+      ]
+     },
+     {
+      "en": "Shek Pik Reservoir",
+      "zh": "石壁水塘",
+      "tier": 30,
+      "aliases": [
+       "Shek Pik"
+      ]
+     },
+     {
+      "en": "Tai Lam Chung Reservoir",
+      "zh": "大欖涌水塘",
+      "tier": 30,
+      "aliases": [
+       "Tai Lam Chung"
+      ]
+     },
+     {
+      "en": "Kowloon Reservoir",
+      "zh": "九龍水塘",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Aberdeen Reservoir",
+      "zh": "香港仔水塘",
+      "tier": 60,
+      "aliases": [
+       "Aberdeen Upper Reservoir",
+       "Aberdeen Lower Reservoir"
+      ]
+     },
+     {
+      "en": "Pok Fu Lam Reservoir",
+      "zh": "薄扶林水塘",
+      "tier": 60,
+      "aliases": [
+       "Pokfulam Reservoir"
+      ]
+     },
+     {
+      "en": "Lower Shing Mun Reservoir",
+      "zh": "下城門水塘",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Wong Nai Chung Reservoir",
+      "zh": "黃泥涌水塘",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tai Tam Tuk Reservoir",
+      "zh": "大潭篤水塘",
+      "tier": 85,
+      "aliases": [
+       "Tai Tam Tuk"
+      ]
+     },
+     {
+      "en": "Shek Lei Pui Reservoir",
+      "zh": "石梨貝水塘",
+      "tier": 85,
+      "aliases": [
+       "Shek Lei Pui"
+      ]
+     },
+     {
+      "en": "Tai Tam Intermediate Reservoir",
+      "zh": "大潭中水塘",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Tai Tam Byewash Reservoir",
+      "zh": "大潭副水塘",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Kowloon Byewash Reservoir",
+      "zh": "九龍副水塘",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Kowloon Reception Reservoir",
+      "zh": "九龍接收水塘",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p3"
+   },
+   {
+    "q": "Name a famous Hong Kong building or tower",
+    "qzh": "說出一座著名香港建築物",
+    "answers": [
+     {
+      "en": "IFC",
+      "zh": "國際金融中心",
+      "tier": 10,
+      "aliases": [
+       "International Finance Centre",
+       "Two IFC",
+       "2 IFC"
+      ]
+     },
+     {
+      "en": "ICC",
+      "zh": "環球貿易廣場",
+      "tier": 10,
+      "aliases": [
+       "International Commerce Centre"
+      ]
+     },
+     {
+      "en": "Bank of China Tower",
+      "zh": "中銀大廈",
+      "tier": 10,
+      "aliases": [
+       "BOC Tower"
+      ]
+     },
+     {
+      "en": "HSBC Main Building",
+      "zh": "滙豐總行大廈",
+      "tier": 30,
+      "aliases": [
+       "HSBC Building",
+       "HSBC Tower"
+      ]
+     },
+     {
+      "en": "Central Plaza",
+      "zh": "中環廣場",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Jardine House",
+      "zh": "怡和大廈",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Lippo Centre",
+      "zh": "力寶中心",
+      "tier": 30,
+      "aliases": [
+       "Lippo"
+      ]
+     },
+     {
+      "en": "Hopewell Centre",
+      "zh": "合和中心",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Cheung Kong Center",
+      "zh": "長江集團中心",
+      "tier": 30,
+      "aliases": [
+       "Cheung Kong Centre"
+      ]
+     },
+     {
+      "en": "Chungking Mansions",
+      "zh": "重慶大廈",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "The Center",
+      "zh": "中環中心",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Monster Building",
+      "zh": "怪獸大廈",
+      "tier": 60,
+      "aliases": [
+       "Yick Cheong Building",
+       "Montane Mansion"
+      ]
+     },
+     {
+      "en": "Sun Hung Kai Centre",
+      "zh": "新鴻基中心",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Exchange Square",
+      "zh": "交易廣場",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "The Cullinan",
+      "zh": "天璽",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Nina Tower",
+      "zh": "如心廣場",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "One Island East",
+      "zh": "港島東中心",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Far East Finance Centre",
+      "zh": "遠東金融中心",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Citibank Plaza",
+      "zh": "花旗銀行廣場",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "The Arch",
+      "zh": "凱旋門",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Highcliff",
+      "zh": "曉廬",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Bank of America Tower",
+      "zh": "美國銀行中心",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "The Henderson",
+      "zh": "恒基中心",
+      "tier": 100,
+      "aliases": [
+       "Henderson"
+      ]
+     }
+    ],
+    "id": "p4"
+   },
+   {
+    "q": "Name a place on Lantau Island",
+    "qzh": "說出一個大嶼山上的地方",
+    "answers": [
+     {
+      "en": "Tung Chung",
+      "zh": "東涌",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Tai O",
+      "zh": "大澳",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Ngong Ping",
+      "zh": "昂坪",
+      "tier": 10,
+      "aliases": [
+       "Ngong Ping 360"
+      ]
+     },
+     {
+      "en": "Mui Wo",
+      "zh": "梅窩",
+      "tier": 30,
+      "aliases": [
+       "Silvermine Bay"
+      ]
+     },
+     {
+      "en": "Discovery Bay",
+      "zh": "愉景灣",
+      "tier": 30,
+      "aliases": [
+       "DB",
+       "Disco Bay"
+      ]
+     },
+     {
+      "en": "Disneyland",
+      "zh": "迪士尼",
+      "tier": 30,
+      "aliases": [
+       "Hong Kong Disneyland",
+       "Penny's Bay",
+       "竹篙灣"
+      ]
+     },
+     {
+      "en": "Pui O",
+      "zh": "貝澳",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Cheung Sha",
+      "zh": "長沙",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Sunny Bay",
+      "zh": "欣澳",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tong Fuk",
+      "zh": "塘福",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Shek Pik",
+      "zh": "石壁",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Pak Kung Au",
+      "zh": "伯公坳",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Siu Ho Wan",
+      "zh": "小蠔灣",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Chi Ma Wan",
+      "zh": "芝麻灣",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Sham Wat",
+      "zh": "深屈",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Fan Lau",
+      "zh": "分流",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Yi O",
+      "zh": "二澳",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Pak Mong",
+      "zh": "白芒",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Ngau Kwu Long",
+      "zh": "牛牯塱",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Tai Ho",
+      "zh": "大蠔",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Shap Long",
+      "zh": "十塱",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Man Kok Tsui",
+      "zh": "萬角咀",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p5"
+   }
+  ]
+ },
+ "2026-11-04": {
+  "date": "2026-11-04",
+  "prompts": [
+   {
+    "q": "Name an MTR station on the East Rail Line",
+    "qzh": "說出一個東鐵綫車站",
+    "answers": [
+     {
+      "en": "Sha Tin",
+      "zh": "沙田",
+      "tier": 10,
+      "aliases": [
+       "Shatin"
+      ]
+     },
+     {
+      "en": "Kowloon Tong",
+      "zh": "九龍塘",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Hung Hom",
+      "zh": "紅磡",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "University",
+      "zh": "大學",
+      "tier": 30,
+      "aliases": [
+       "CUHK station"
+      ]
+     },
+     {
+      "en": "Tai Po Market",
+      "zh": "大埔墟",
+      "tier": 30,
+      "aliases": [
+       "Tai Po"
+      ]
+     },
+     {
+      "en": "Sheung Shui",
+      "zh": "上水",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Lo Wu",
+      "zh": "羅湖",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Admiralty",
+      "zh": "金鐘",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tai Wai",
+      "zh": "大圍",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Fanling",
+      "zh": "粉嶺",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Mong Kok East",
+      "zh": "旺角東",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Lok Ma Chau",
+      "zh": "落馬洲",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Fo Tan",
+      "zh": "火炭",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Exhibition Centre",
+      "zh": "會展",
+      "tier": 85,
+      "aliases": [
+       "Exhibition"
+      ]
+     },
+     {
+      "en": "Tai Wo",
+      "zh": "太和",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Racecourse",
+      "zh": "馬場",
+      "tier": 100,
+      "aliases": [
+       "Sha Tin Racecourse"
+      ]
+     }
+    ],
+    "id": "p1"
+   },
+   {
+    "q": "Name a Hong Kong urban park or garden",
+    "qzh": "說出一個香港市區公園或花園",
+    "answers": [
+     {
+      "en": "Victoria Park",
+      "zh": "維多利亞公園",
+      "tier": 10,
+      "aliases": [
+       "Vic Park"
+      ]
+     },
+     {
+      "en": "Kowloon Park",
+      "zh": "九龍公園",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Hong Kong Park",
+      "zh": "香港公園",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Hong Kong Zoological and Botanical Gardens",
+      "zh": "香港動植物公園",
+      "tier": 30,
+      "aliases": [
+       "Botanical Gardens",
+       "Zoological and Botanical Gardens",
+       "Botanical Garden"
+      ]
+     },
+     {
+      "en": "Tamar Park",
+      "zh": "添馬公園",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Kowloon Walled City Park",
+      "zh": "九龍寨城公園",
+      "tier": 30,
+      "aliases": [
+       "Walled City Park"
+      ]
+     },
+     {
+      "en": "Hong Kong Wetland Park",
+      "zh": "香港濕地公園",
+      "tier": 30,
+      "aliases": [
+       "Wetland Park"
+      ]
+     },
+     {
+      "en": "Nan Lian Garden",
+      "zh": "南蓮園池",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Sha Tin Park",
+      "zh": "沙田公園",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tai Po Waterfront Park",
+      "zh": "大埔海濱公園",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Chater Garden",
+      "zh": "遮打花園",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Statue Square",
+      "zh": "皇后像廣場",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Quarry Bay Park",
+      "zh": "鰂魚涌公園",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tuen Mun Park",
+      "zh": "屯門公園",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Lai Chi Kok Park",
+      "zh": "荔枝角公園",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Sun Yat Sen Memorial Park",
+      "zh": "中山紀念公園",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Morse Park",
+      "zh": "摩士公園",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Ma On Shan Park",
+      "zh": "馬鞍山公園",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Yuen Long Park",
+      "zh": "元朗公園",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Kai Tak Runway Park",
+      "zh": "啟德跑道公園",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Hong Kong Velodrome Park",
+      "zh": "香港單車館公園",
+      "tier": 85,
+      "aliases": [
+       "Velodrome Park"
+      ]
+     },
+     {
+      "en": "Blake Garden",
+      "zh": "卜公花園",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Shek Kip Mei Park",
+      "zh": "石硤尾公園",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Kowloon Tsai Park",
+      "zh": "九龍仔公園",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Jordan Valley Park",
+      "zh": "佐敦谷公園",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Hoi Sham Park",
+      "zh": "海心公園",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Po Kong Village Road Park",
+      "zh": "蒲崗村道公園",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "North District Park",
+      "zh": "北區公園",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p2"
+   },
+   {
+    "q": "Name a Hong Kong market or shopping street",
+    "qzh": "說出一個香港市集或特色購物街",
+    "answers": [
+     {
+      "en": "Ladies' Market",
+      "zh": "女人街",
+      "tier": 10,
+      "aliases": [
+       "Ladies Market"
+      ]
+     },
+     {
+      "en": "Temple Street Night Market",
+      "zh": "廟街夜市",
+      "tier": 10,
+      "aliases": [
+       "Temple Street"
+      ]
+     },
+     {
+      "en": "Stanley Market",
+      "zh": "赤柱市集",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Goldfish Market",
+      "zh": "金魚街",
+      "tier": 30,
+      "aliases": [
+       "Goldfish Street"
+      ]
+     },
+     {
+      "en": "Flower Market",
+      "zh": "花墟",
+      "tier": 30,
+      "aliases": [
+       "Flower Market Road"
+      ]
+     },
+     {
+      "en": "Apliu Street",
+      "zh": "鴨寮街",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Jade Market",
+      "zh": "玉器市場",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Sneakers Street",
+      "zh": "波鞋街",
+      "tier": 30,
+      "aliases": [
+       "Fa Yuen Street",
+       "Sneaker Street"
+      ]
+     },
+     {
+      "en": "Bird Garden",
+      "zh": "雀鳥花園",
+      "tier": 60,
+      "aliases": [
+       "Yuen Po Street Bird Garden"
+      ]
+     },
+     {
+      "en": "Cat Street",
+      "zh": "摩羅街",
+      "tier": 60,
+      "aliases": [
+       "Upper Lascar Row"
+      ]
+     },
+     {
+      "en": "Graham Street Market",
+      "zh": "嘉咸街市",
+      "tier": 60,
+      "aliases": [
+       "Graham Street"
+      ]
+     },
+     {
+      "en": "Chun Yeung Street",
+      "zh": "春秧街",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Bowrington Road Market",
+      "zh": "寶靈頓道街市",
+      "tier": 85,
+      "aliases": [
+       "Bowrington Road"
+      ]
+     },
+     {
+      "en": "Tai Yuen Street",
+      "zh": "太原街",
+      "tier": 85,
+      "aliases": [
+       "Toy Street"
+      ]
+     },
+     {
+      "en": "Ki Lung Street",
+      "zh": "基隆街",
+      "tier": 85,
+      "aliases": [
+       "Fabric Street"
+      ]
+     },
+     {
+      "en": "Dried Seafood Street",
+      "zh": "海味街",
+      "tier": 85,
+      "aliases": [
+       "Des Voeux Road West"
+      ]
+     },
+     {
+      "en": "Sham Shui Po Fabric Market",
+      "zh": "深水埗布市",
+      "tier": 100,
+      "aliases": [
+       "Wong Chuk Street"
+      ],
+      "check": true
+     },
+     {
+      "en": "Electronics Street",
+      "zh": "電子街",
+      "tier": 100,
+      "aliases": [
+       "Tung Choi Street North"
+      ],
+      "check": true
+     }
+    ],
+    "id": "p3"
+   },
+   {
+    "q": "Name a Hong Kong bridge",
+    "qzh": "說出一條香港大橋",
+    "answers": [
+     {
+      "en": "Tsing Ma Bridge",
+      "zh": "青馬大橋",
+      "tier": 10,
+      "aliases": [
+       "Tsing Ma"
+      ]
+     },
+     {
+      "en": "Hong Kong–Zhuhai–Macau Bridge",
+      "zh": "港珠澳大橋",
+      "tier": 10,
+      "aliases": [
+       "HZMB",
+       "Hong Kong Zhuhai Macau Bridge",
+       "Hong Kong-Zhuhai-Macao Bridge"
+      ]
+     },
+     {
+      "en": "Stonecutters Bridge",
+      "zh": "昂船洲大橋",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Ting Kau Bridge",
+      "zh": "汀九橋",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Ap Lei Chau Bridge",
+      "zh": "鴨脷洲大橋",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Kap Shui Mun Bridge",
+      "zh": "汲水門大橋",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Shenzhen Bay Bridge",
+      "zh": "深圳灣公路大橋",
+      "tier": 60,
+      "aliases": [
+       "Shenzhen Bay"
+      ]
+     },
+     {
+      "en": "Tsing Yi Bridge",
+      "zh": "青衣大橋",
+      "tier": 85,
+      "aliases": [
+       "Tsing Yi South Bridge"
+      ]
+     },
+     {
+      "en": "Tsing Yi North Bridge",
+      "zh": "青衣北橋",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Tsing Tsuen Bridge",
+      "zh": "青荃橋",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Rambler Channel Bridge",
+      "zh": "藍巴勒海峽橋",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Cheung Tsing Bridge",
+      "zh": "長青橋",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p4"
+   },
+   {
+    "q": "Name a Hong Kong museum",
+    "qzh": "說出一間香港博物館",
+    "answers": [
+     {
+      "en": "Hong Kong Museum of History",
+      "zh": "香港歷史博物館",
+      "tier": 10,
+      "aliases": [
+       "Museum of History",
+       "History Museum"
+      ]
+     },
+     {
+      "en": "Hong Kong Science Museum",
+      "zh": "香港科學館",
+      "tier": 10,
+      "aliases": [
+       "Science Museum"
+      ]
+     },
+     {
+      "en": "M+",
+      "zh": "M+",
+      "tier": 10,
+      "aliases": [
+       "M plus",
+       "Mplus"
+      ]
+     },
+     {
+      "en": "Hong Kong Palace Museum",
+      "zh": "香港故宮文化博物館",
+      "tier": 10,
+      "aliases": [
+       "Palace Museum"
+      ]
+     },
+     {
+      "en": "Hong Kong Museum of Art",
+      "zh": "香港藝術館",
+      "tier": 30,
+      "aliases": [
+       "Museum of Art"
+      ]
+     },
+     {
+      "en": "Hong Kong Space Museum",
+      "zh": "香港太空館",
+      "tier": 30,
+      "aliases": [
+       "Space Museum"
+      ]
+     },
+     {
+      "en": "Hong Kong Heritage Museum",
+      "zh": "香港文化博物館",
+      "tier": 30,
+      "aliases": [
+       "Heritage Museum"
+      ]
+     },
+     {
+      "en": "Hong Kong Maritime Museum",
+      "zh": "香港海事博物館",
+      "tier": 60,
+      "aliases": [
+       "Maritime Museum"
+      ]
+     },
+     {
+      "en": "Madame Tussauds",
+      "zh": "杜莎夫人蠟像館",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Museum of Coastal Defence",
+      "zh": "香港海防博物館",
+      "tier": 60,
+      "aliases": [
+       "Coastal Defence Museum"
+      ]
+     },
+     {
+      "en": "Flagstaff House Museum of Tea Ware",
+      "zh": "茶具文物館",
+      "tier": 60,
+      "aliases": [
+       "Museum of Tea Ware",
+       "Flagstaff House"
+      ]
+     },
+     {
+      "en": "Dr Sun Yat-sen Museum",
+      "zh": "孫中山紀念館",
+      "tier": 60,
+      "aliases": [
+       "Sun Yat Sen Museum"
+      ]
+     },
+     {
+      "en": "Hong Kong Railway Museum",
+      "zh": "香港鐵路博物館",
+      "tier": 60,
+      "aliases": [
+       "Railway Museum"
+      ]
+     },
+     {
+      "en": "Hong Kong Museum of Medical Sciences",
+      "zh": "香港醫學博物館",
+      "tier": 85,
+      "aliases": [
+       "Medical Sciences Museum"
+      ]
+     },
+     {
+      "en": "Hong Kong Film Archive",
+      "zh": "香港電影資料館",
+      "tier": 85,
+      "aliases": [
+       "Film Archive"
+      ]
+     },
+     {
+      "en": "Police Museum",
+      "zh": "警隊博物館",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Lei Cheng Uk Han Tomb Museum",
+      "zh": "李鄭屋漢墓博物館",
+      "tier": 85,
+      "aliases": [
+       "Lei Cheng Uk Han Tomb"
+      ]
+     },
+     {
+      "en": "University Museum and Art Gallery",
+      "zh": "香港大學美術博物館",
+      "tier": 85,
+      "aliases": [
+       "UMAG"
+      ]
+     },
+     {
+      "en": "Correctional Services Museum",
+      "zh": "懲教博物館",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Sheung Yiu Folk Museum",
+      "zh": "上窰民俗文物館",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Law Uk Folk Museum",
+      "zh": "羅屋民俗館",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Sam Tung Uk Museum",
+      "zh": "三棟屋博物館",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Fireboat Alexander Grantham",
+      "zh": "葛量洪號滅火輪",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p5"
+   }
+  ]
+ },
+ "2026-11-05": {
+  "date": "2026-11-05",
+  "prompts": [
+   {
+    "q": "Name an MTR station on the Kwun Tong Line",
+    "qzh": "說出一個觀塘綫車站",
+    "answers": [
+     {
+      "en": "Mong Kok",
+      "zh": "旺角",
+      "tier": 10,
+      "aliases": [
+       "Mongkok",
+       "MK"
+      ]
+     },
+     {
+      "en": "Kwun Tong",
+      "zh": "觀塘",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Kowloon Tong",
+      "zh": "九龍塘",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Prince Edward",
+      "zh": "太子",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Yau Ma Tei",
+      "zh": "油麻地",
+      "tier": 30,
+      "aliases": [
+       "YMT"
+      ]
+     },
+     {
+      "en": "Diamond Hill",
+      "zh": "鑽石山",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Wong Tai Sin",
+      "zh": "黃大仙",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Kowloon Bay",
+      "zh": "九龍灣",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Lam Tin",
+      "zh": "藍田",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Whampoa",
+      "zh": "黃埔",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Ho Man Tin",
+      "zh": "何文田",
+      "tier": 60,
+      "aliases": [
+       "Homantin"
+      ]
+     },
+     {
+      "en": "Choi Hung",
+      "zh": "彩虹",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tiu Keng Leng",
+      "zh": "調景嶺",
+      "tier": 60,
+      "aliases": [
+       "TKL"
+      ]
+     },
+     {
+      "en": "Yau Tong",
+      "zh": "油塘",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Ngau Tau Kok",
+      "zh": "牛頭角",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Shek Kip Mei",
+      "zh": "石硤尾",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Lok Fu",
+      "zh": "樂富",
+      "tier": 85,
+      "aliases": []
+     }
+    ],
+    "id": "p1"
+   },
+   {
+    "q": "Name a Hong Kong shopping mall",
+    "qzh": "說出一個香港商場",
+    "answers": [
+     {
+      "en": "Harbour City",
+      "zh": "海港城",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "IFC Mall",
+      "zh": "國際金融中心商場",
+      "tier": 10,
+      "aliases": [
+       "IFC"
+      ]
+     },
+     {
+      "en": "Times Square",
+      "zh": "時代廣場",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Pacific Place",
+      "zh": "太古廣場",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Langham Place",
+      "zh": "朗豪坊",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Festival Walk",
+      "zh": "又一城",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "New Town Plaza",
+      "zh": "新城市廣場",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "K11 Musea",
+      "zh": "K11 Musea",
+      "tier": 30,
+      "aliases": [
+       "K11"
+      ]
+     },
+     {
+      "en": "Elements",
+      "zh": "圓方",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "APM",
+      "zh": "APM",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "MegaBox",
+      "zh": "MegaBox",
+      "tier": 30,
+      "aliases": [
+       "Mega Box"
+      ]
+     },
+     {
+      "en": "Cityplaza",
+      "zh": "太古城中心",
+      "tier": 30,
+      "aliases": [
+       "City Plaza"
+      ]
+     },
+     {
+      "en": "Hysan Place",
+      "zh": "希慎廣場",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Lee Gardens",
+      "zh": "利園",
+      "tier": 60,
+      "aliases": [
+       "Lee Garden"
+      ]
+     },
+     {
+      "en": "Landmark",
+      "zh": "置地廣場",
+      "tier": 60,
+      "aliases": [
+       "The Landmark"
+      ]
+     },
+     {
+      "en": "Citygate",
+      "zh": "東薈城",
+      "tier": 60,
+      "aliases": [
+       "Citygate Outlets"
+      ]
+     },
+     {
+      "en": "Olympian City",
+      "zh": "奧海城",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Moko",
+      "zh": "新世紀廣場",
+      "tier": 60,
+      "aliases": [
+       "MOKO"
+      ]
+     },
+     {
+      "en": "iSquare",
+      "zh": "國際廣場",
+      "tier": 60,
+      "aliases": [
+       "i Square"
+      ]
+     },
+     {
+      "en": "Mira Place",
+      "zh": "美麗華廣場",
+      "tier": 85,
+      "aliases": [
+       "Miramar"
+      ]
+     },
+     {
+      "en": "Yoho Mall",
+      "zh": "形點",
+      "tier": 85,
+      "aliases": [
+       "YOHO"
+      ]
+     },
+     {
+      "en": "Tuen Mun Town Plaza",
+      "zh": "屯門市廣場",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Telford Plaza",
+      "zh": "德福廣場",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Plaza Hollywood",
+      "zh": "荷里活廣場",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Dragon Centre",
+      "zh": "西九龍中心",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Sino Centre",
+      "zh": "信和中心",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Golden Computer Arcade",
+      "zh": "黃金電腦商場",
+      "tier": 100,
+      "aliases": [
+       "Golden Arcade"
+      ]
+     },
+     {
+      "en": "AIRSIDE",
+      "zh": "AIRSIDE",
+      "tier": 100,
+      "aliases": [
+       "Airside"
+      ]
+     },
+     {
+      "en": "The ONE",
+      "zh": "The ONE",
+      "tier": 100,
+      "aliases": [
+       "The One"
+      ]
+     }
+    ],
+    "id": "p2"
+   },
+   {
+    "q": "Name a Hong Kong hiking trail or hike",
+    "qzh": "說出一條香港行山徑",
+    "answers": [
+     {
+      "en": "Dragon's Back",
+      "zh": "龍脊",
+      "tier": 10,
+      "aliases": [
+       "Dragons Back"
+      ]
+     },
+     {
+      "en": "MacLehose Trail",
+      "zh": "麥理浩徑",
+      "tier": 10,
+      "aliases": [
+       "MacLehose"
+      ]
+     },
+     {
+      "en": "Lion Rock",
+      "zh": "獅子山",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Wilson Trail",
+      "zh": "衞奕信徑",
+      "tier": 30,
+      "aliases": [
+       "Wilson"
+      ]
+     },
+     {
+      "en": "Hong Kong Trail",
+      "zh": "港島徑",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Lantau Trail",
+      "zh": "鳳凰徑",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Lugard Road",
+      "zh": "盧吉道",
+      "tier": 30,
+      "aliases": [
+       "Peak Circle Walk"
+      ]
+     },
+     {
+      "en": "Twins",
+      "zh": "孖崗山",
+      "tier": 60,
+      "aliases": [
+       "The Twins",
+       "Stanley Twins"
+      ]
+     },
+     {
+      "en": "Sharp Peak",
+      "zh": "蚺蛇尖",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tai Long Wan Trail",
+      "zh": "大浪灣行山徑",
+      "tier": 60,
+      "aliases": [
+       "Tai Long Wan"
+      ],
+      "check": true
+     },
+     {
+      "en": "High Island Reservoir East Dam",
+      "zh": "萬宜水庫東壩",
+      "tier": 60,
+      "aliases": [
+       "East Dam"
+      ]
+     },
+     {
+      "en": "Ng Tung Chai Waterfalls",
+      "zh": "梧桐寨瀑布",
+      "tier": 60,
+      "aliases": [
+       "Ng Tung Chai"
+      ]
+     },
+     {
+      "en": "Kowloon Peak",
+      "zh": "飛鵝山",
+      "tier": 60,
+      "aliases": [
+       "Suicide Cliff",
+       "Fei Ngo Shan"
+      ]
+     },
+     {
+      "en": "Devil's Peak",
+      "zh": "魔鬼山",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Violet Hill",
+      "zh": "紫羅蘭山",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Pat Sin Leng Nature Trail",
+      "zh": "八仙嶺自然教育徑",
+      "tier": 85,
+      "aliases": [
+       "Pat Sin Leng"
+      ]
+     },
+     {
+      "en": "Bowen Road",
+      "zh": "寶雲道",
+      "tier": 85,
+      "aliases": [
+       "Bowen Road Fitness Trail"
+      ]
+     },
+     {
+      "en": "Hatton Road",
+      "zh": "夏力道",
+      "tier": 85,
+      "aliases": [
+       "Morning Trail"
+      ]
+     },
+     {
+      "en": "Lady Clementi's Ride",
+      "zh": "金夫人馳馬徑",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Wu Kau Tang",
+      "zh": "烏蛟騰",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Lai Chi Wo",
+      "zh": "荔枝窩",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Needle Hill",
+      "zh": "針山",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p3"
+   },
+   {
+    "q": "Name a Hong Kong island whose Chinese name ends in 洲",
+    "qzh": "說出一個以「洲」結尾的香港島嶼",
+    "answers": [
+     {
+      "en": "Cheung Chau",
+      "zh": "長洲",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Ap Lei Chau",
+      "zh": "鴨脷洲",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Peng Chau",
+      "zh": "坪洲",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tung Lung Chau",
+      "zh": "東龍洲",
+      "tier": 60,
+      "aliases": [
+       "Tung Lung Island"
+      ]
+     },
+     {
+      "en": "Tung Ping Chau",
+      "zh": "東平洲",
+      "tier": 60,
+      "aliases": [
+       "Ping Chau"
+      ]
+     },
+     {
+      "en": "Stonecutters Island",
+      "zh": "昂船洲",
+      "tier": 60,
+      "aliases": [
+       "Ngong Shuen Chau",
+       "Stonecutters"
+      ]
+     },
+     {
+      "en": "Sharp Island",
+      "zh": "橋咀洲",
+      "tier": 85,
+      "aliases": [
+       "Kiu Tsui Chau"
+      ]
+     },
+     {
+      "en": "Kau Sai Chau",
+      "zh": "滘西洲",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Hei Ling Chau",
+      "zh": "喜靈洲",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Ap Chau",
+      "zh": "鴨洲",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Kau Yi Chau",
+      "zh": "交椅洲",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Green Island",
+      "zh": "青洲",
+      "tier": 85,
+      "aliases": [
+       "Tsing Chau"
+      ]
+     },
+     {
+      "en": "Siu Kau Yi Chau",
+      "zh": "小交椅洲",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Basalt Island",
+      "zh": "火石洲",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Ninepin Group",
+      "zh": "果洲",
+      "tier": 100,
+      "aliases": [
+       "Ninepins",
+       "Kwo Chau"
+      ]
+     },
+     {
+      "en": "Chek Chau",
+      "zh": "赤洲",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Ma Shi Chau",
+      "zh": "馬屎洲",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Pak Sha Chau",
+      "zh": "白沙洲",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p4"
+   },
+   {
+    "q": "Name a historic or heritage building in Hong Kong",
+    "qzh": "說出一座香港歷史建築",
+    "answers": [
+     {
+      "en": "Tai Kwun",
+      "zh": "大館",
+      "tier": 10,
+      "aliases": [
+       "Central Police Station"
+      ]
+     },
+     {
+      "en": "Clock Tower",
+      "zh": "尖沙咀鐘樓",
+      "tier": 10,
+      "aliases": [
+       "Tsim Sha Tsui Clock Tower",
+       "Former Kowloon-Canton Railway Clock Tower"
+      ]
+     },
+     {
+      "en": "PMQ",
+      "zh": "元創方",
+      "tier": 30,
+      "aliases": [
+       "Police Married Quarters"
+      ]
+     },
+     {
+      "en": "Court of Final Appeal Building",
+      "zh": "終審法院大樓",
+      "tier": 30,
+      "aliases": [
+       "Former Legislative Council Building",
+       "Old Supreme Court"
+      ]
+     },
+     {
+      "en": "Government House",
+      "zh": "禮賓府",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "St John's Cathedral",
+      "zh": "聖約翰座堂",
+      "tier": 30,
+      "aliases": [
+       "St Johns Cathedral"
+      ]
+     },
+     {
+      "en": "Blue House",
+      "zh": "藍屋",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "1881 Heritage",
+      "zh": "1881",
+      "tier": 60,
+      "aliases": [
+       "Former Marine Police Headquarters",
+       "1881"
+      ]
+     },
+     {
+      "en": "Murray House",
+      "zh": "美利樓",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Western Market",
+      "zh": "西港城",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Central Market",
+      "zh": "中環街市",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Mei Ho House",
+      "zh": "美荷樓",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Lui Seng Chun",
+      "zh": "雷生春",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Haw Par Mansion",
+      "zh": "虎豹別墅",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "King Yin Lei",
+      "zh": "景賢里",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Kom Tong Hall",
+      "zh": "甘棠第",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Béthanie",
+      "zh": "伯大尼",
+      "tier": 85,
+      "aliases": [
+       "Bethanie"
+      ]
+     },
+     {
+      "en": "The Pawn",
+      "zh": "和昌大押",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Tai O Heritage Hotel",
+      "zh": "大澳文物酒店",
+      "tier": 85,
+      "aliases": [
+       "Old Tai O Police Station"
+      ]
+     },
+     {
+      "en": "Tsui Sing Lau Pagoda",
+      "zh": "聚星樓",
+      "tier": 100,
+      "aliases": [
+       "Tsui Sing Lau"
+      ]
+     },
+     {
+      "en": "Tsang Tai Uk",
+      "zh": "曾大屋",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Tang Ancestral Hall",
+      "zh": "鄧氏宗祠",
+      "tier": 100,
+      "aliases": [
+       "Ping Shan Tang Clan Ancestral Hall"
+      ]
+     },
+     {
+      "en": "Ohel Leah Synagogue",
+      "zh": "莉亞堂",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p5"
+   }
+  ]
+ },
+ "2026-11-06": {
+  "date": "2026-11-06",
+  "prompts": [
+   {
+    "q": "Name an MTR station at the end of a line (a terminus)",
+    "qzh": "說出一個港鐵綫的終點站",
+    "answers": [
+     {
+      "en": "Tsuen Wan",
+      "zh": "荃灣",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Chai Wan",
+      "zh": "柴灣",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Kennedy Town",
+      "zh": "堅尼地城",
+      "tier": 10,
+      "aliases": [
+       "KTown"
+      ]
+     },
+     {
+      "en": "Central",
+      "zh": "中環",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Tung Chung",
+      "zh": "東涌",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Lo Wu",
+      "zh": "羅湖",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tuen Mun",
+      "zh": "屯門",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Hong Kong",
+      "zh": "香港",
+      "tier": 30,
+      "aliases": [
+       "Hong Kong Station"
+      ]
+     },
+     {
+      "en": "Admiralty",
+      "zh": "金鐘",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tiu Keng Leng",
+      "zh": "調景嶺",
+      "tier": 30,
+      "aliases": [
+       "TKL"
+      ]
+     },
+     {
+      "en": "Whampoa",
+      "zh": "黃埔",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Po Lam",
+      "zh": "寶琳",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Wu Kai Sha",
+      "zh": "烏溪沙",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Lok Ma Chau",
+      "zh": "落馬洲",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "North Point",
+      "zh": "北角",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Disneyland Resort",
+      "zh": "迪士尼",
+      "tier": 60,
+      "aliases": [
+       "Disneyland"
+      ]
+     },
+     {
+      "en": "LOHAS Park",
+      "zh": "康城",
+      "tier": 85,
+      "aliases": [
+       "Lohas"
+      ]
+     },
+     {
+      "en": "South Horizons",
+      "zh": "海怡半島",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Sunny Bay",
+      "zh": "欣澳",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "AsiaWorld-Expo",
+      "zh": "博覽館",
+      "tier": 100,
+      "aliases": [
+       "Asia World Expo",
+       "AsiaWorld Expo"
+      ]
+     }
+    ],
+    "id": "p1"
+   },
+   {
+    "q": "Name a New Territories town or area",
+    "qzh": "說出一個新界市鎮或地區",
+    "answers": [
+     {
+      "en": "Sha Tin",
+      "zh": "沙田",
+      "tier": 10,
+      "aliases": [
+       "Shatin"
+      ]
+     },
+     {
+      "en": "Tuen Mun",
+      "zh": "屯門",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Yuen Long",
+      "zh": "元朗",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Tsuen Wan",
+      "zh": "荃灣",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Tai Po",
+      "zh": "大埔",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Sai Kung",
+      "zh": "西貢",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Fanling",
+      "zh": "粉嶺",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Sheung Shui",
+      "zh": "上水",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tin Shui Wai",
+      "zh": "天水圍",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tseung Kwan O",
+      "zh": "將軍澳",
+      "tier": 30,
+      "aliases": [
+       "TKO"
+      ]
+     },
+     {
+      "en": "Ma On Shan",
+      "zh": "馬鞍山",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Kwai Chung",
+      "zh": "葵涌",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tsing Yi",
+      "zh": "青衣",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tai Wai",
+      "zh": "大圍",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Fo Tan",
+      "zh": "火炭",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Kam Tin",
+      "zh": "錦田",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Hang Hau",
+      "zh": "坑口",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Sham Tseng",
+      "zh": "深井",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Sha Tau Kok",
+      "zh": "沙頭角",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Lau Fau Shan",
+      "zh": "流浮山",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Ping Shan",
+      "zh": "屏山",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Hung Shui Kiu",
+      "zh": "洪水橋",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Lam Tsuen",
+      "zh": "林村",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Shek Kong",
+      "zh": "石崗",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Pat Heung",
+      "zh": "八鄉",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Ta Kwu Ling",
+      "zh": "打鼓嶺",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Kwu Tung",
+      "zh": "古洞",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "So Kwun Wat",
+      "zh": "掃管笏",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Tai Mei Tuk",
+      "zh": "大美督",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Pak Tam Chung",
+      "zh": "北潭涌",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p2"
+   },
+   {
+    "q": "Name a Hong Kong harbour, channel or river",
+    "qzh": "說出一個香港港口、海峽或河流",
+    "answers": [
+     {
+      "en": "Victoria Harbour",
+      "zh": "維多利亞港",
+      "tier": 10,
+      "aliases": [
+       "Victoria Harbor"
+      ]
+     },
+     {
+      "en": "Shing Mun River",
+      "zh": "城門河",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tolo Harbour",
+      "zh": "吐露港",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Lei Yue Mun",
+      "zh": "鯉魚門",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Aberdeen Harbour",
+      "zh": "香港仔避風塘",
+      "tier": 60,
+      "aliases": [
+       "Aberdeen Typhoon Shelter"
+      ]
+     },
+     {
+      "en": "Sham Chun River",
+      "zh": "深圳河",
+      "tier": 60,
+      "aliases": [
+       "Shenzhen River"
+      ]
+     },
+     {
+      "en": "Deep Bay",
+      "zh": "后海灣",
+      "tier": 60,
+      "aliases": [
+       "Shenzhen Bay"
+      ]
+     },
+     {
+      "en": "Mirs Bay",
+      "zh": "大鵬灣",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Rambler Channel",
+      "zh": "藍巴勒海峽",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Kap Shui Mun",
+      "zh": "汲水門",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Ma Wan Channel",
+      "zh": "馬灣海峽",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Port Shelter",
+      "zh": "牛尾海",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Lamma Channel",
+      "zh": "南丫海峽",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Tolo Channel",
+      "zh": "赤門海峽",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Sulphur Channel",
+      "zh": "硫磺海峽",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "East Lamma Channel",
+      "zh": "東博寮海峽",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "West Lamma Channel",
+      "zh": "西博寮海峽",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Urmston Road",
+      "zh": "龍鼓水道",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Tathong Channel",
+      "zh": "佛堂門",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Starling Inlet",
+      "zh": "沙頭角海",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Lam Tsuen River",
+      "zh": "林村河",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Tuen Mun River",
+      "zh": "屯門河",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p3"
+   },
+   {
+    "q": "Name an MTR line (heavy rail)",
+    "qzh": "說出一條港鐵綫",
+    "answers": [
+     {
+      "en": "Island Line",
+      "zh": "港島綫",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Tsuen Wan Line",
+      "zh": "荃灣綫",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "East Rail Line",
+      "zh": "東鐵綫",
+      "tier": 10,
+      "aliases": [
+       "East Rail"
+      ]
+     },
+     {
+      "en": "Kwun Tong Line",
+      "zh": "觀塘綫",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tuen Ma Line",
+      "zh": "屯馬綫",
+      "tier": 30,
+      "aliases": [
+       "Tuen Ma"
+      ]
+     },
+     {
+      "en": "Airport Express",
+      "zh": "機場快綫",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tung Chung Line",
+      "zh": "東涌綫",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tseung Kwan O Line",
+      "zh": "將軍澳綫",
+      "tier": 60,
+      "aliases": [
+       "TKO Line"
+      ]
+     },
+     {
+      "en": "South Island Line",
+      "zh": "南港島綫",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Disneyland Resort Line",
+      "zh": "迪士尼綫",
+      "tier": 100,
+      "aliases": [
+       "Disneyland Line"
+      ]
+     }
+    ],
+    "id": "p4"
+   },
+   {
+    "q": "Name a Hong Kong hospital",
+    "qzh": "說出一間香港醫院",
+    "answers": [
+     {
+      "en": "Queen Mary Hospital",
+      "zh": "瑪麗醫院",
+      "tier": 10,
+      "aliases": [
+       "Queen Mary"
+      ]
+     },
+     {
+      "en": "Prince of Wales Hospital",
+      "zh": "威爾斯親王醫院",
+      "tier": 10,
+      "aliases": [
+       "Prince of Wales"
+      ]
+     },
+     {
+      "en": "Queen Elizabeth Hospital",
+      "zh": "伊利沙伯醫院",
+      "tier": 10,
+      "aliases": [
+       "QEH",
+       "Queen Elizabeth"
+      ]
+     },
+     {
+      "en": "Tuen Mun Hospital",
+      "zh": "屯門醫院",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Pamela Youde Nethersole Eastern Hospital",
+      "zh": "東區尤德夫人那打素醫院",
+      "tier": 30,
+      "aliases": [
+       "Eastern Hospital",
+       "PYNEH"
+      ]
+     },
+     {
+      "en": "Princess Margaret Hospital",
+      "zh": "瑪嘉烈醫院",
+      "tier": 30,
+      "aliases": [
+       "Princess Margaret"
+      ]
+     },
+     {
+      "en": "Kwong Wah Hospital",
+      "zh": "廣華醫院",
+      "tier": 30,
+      "aliases": [
+       "Kwong Wah"
+      ]
+     },
+     {
+      "en": "United Christian Hospital",
+      "zh": "基督教聯合醫院",
+      "tier": 30,
+      "aliases": [
+       "UCH"
+      ]
+     },
+     {
+      "en": "Hong Kong Sanatorium",
+      "zh": "養和醫院",
+      "tier": 30,
+      "aliases": [
+       "Yeung Wo",
+       "HK Sanatorium"
+      ]
+     },
+     {
+      "en": "Caritas Medical Centre",
+      "zh": "明愛醫院",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tseung Kwan O Hospital",
+      "zh": "將軍澳醫院",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "North District Hospital",
+      "zh": "北區醫院",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Alice Ho Miu Ling Nethersole Hospital",
+      "zh": "雅麗氏何妙齡那打素醫院",
+      "tier": 60,
+      "aliases": [
+       "Nethersole Hospital",
+       "AHNH"
+      ]
+     },
+     {
+      "en": "Pok Oi Hospital",
+      "zh": "博愛醫院",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Yan Chai Hospital",
+      "zh": "仁濟醫院",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Hong Kong Children's Hospital",
+      "zh": "香港兒童醫院",
+      "tier": 60,
+      "aliases": [
+       "Childrens Hospital"
+      ]
+     },
+     {
+      "en": "CUHK Medical Centre",
+      "zh": "香港中文大學醫院",
+      "tier": 60,
+      "aliases": [
+       "CUHKMC"
+      ]
+     },
+     {
+      "en": "Tin Shui Wai Hospital",
+      "zh": "天水圍醫院",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "North Lantau Hospital",
+      "zh": "北大嶼山醫院",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Ruttonjee Hospital",
+      "zh": "律敦治醫院",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Tung Wah Hospital",
+      "zh": "東華醫院",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Grantham Hospital",
+      "zh": "葛量洪醫院",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Kowloon Hospital",
+      "zh": "九龍醫院",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Castle Peak Hospital",
+      "zh": "青山醫院",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Kwai Chung Hospital",
+      "zh": "葵涌醫院",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "St Teresa's Hospital",
+      "zh": "聖德肋撒醫院",
+      "tier": 85,
+      "aliases": [
+       "St Teresas Hospital"
+      ]
+     },
+     {
+      "en": "Hong Kong Adventist Hospital",
+      "zh": "港安醫院",
+      "tier": 85,
+      "aliases": [
+       "Adventist"
+      ]
+     },
+     {
+      "en": "Canossa Hospital",
+      "zh": "嘉諾撒醫院",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Matilda International Hospital",
+      "zh": "明德國際醫院",
+      "tier": 100,
+      "aliases": [
+       "Matilda"
+      ]
+     },
+     {
+      "en": "Gleneagles Hospital",
+      "zh": "港怡醫院",
+      "tier": 100,
+      "aliases": [
+       "Gleneagles"
+      ]
+     },
+     {
+      "en": "St Paul's Hospital",
+      "zh": "聖保祿醫院",
+      "tier": 100,
+      "aliases": [
+       "St Pauls Hospital"
+      ]
+     },
+     {
+      "en": "Evangel Hospital",
+      "zh": "播道醫院",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Union Hospital",
+      "zh": "仁安醫院",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Hong Kong Baptist Hospital",
+      "zh": "香港浸信會醫院",
+      "tier": 100,
+      "aliases": [
+       "Baptist Hospital"
+      ]
+     }
+    ],
+    "id": "p5"
+   }
+  ]
+ },
+ "2026-11-07": {
+  "date": "2026-11-07",
+  "prompts": [
+   {
+    "q": "Name an MTR station on the Tseung Kwan O Line",
+    "qzh": "說出一個將軍澳綫車站",
+    "answers": [
+     {
+      "en": "Tseung Kwan O",
+      "zh": "將軍澳",
+      "tier": 10,
+      "aliases": [
+       "TKO"
+      ]
+     },
+     {
+      "en": "North Point",
+      "zh": "北角",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Tiu Keng Leng",
+      "zh": "調景嶺",
+      "tier": 30,
+      "aliases": [
+       "TKL"
+      ]
+     },
+     {
+      "en": "Po Lam",
+      "zh": "寶琳",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Quarry Bay",
+      "zh": "鰂魚涌",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Hang Hau",
+      "zh": "坑口",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Yau Tong",
+      "zh": "油塘",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "LOHAS Park",
+      "zh": "康城",
+      "tier": 100,
+      "aliases": [
+       "Lohas"
+      ]
+     }
+    ],
+    "id": "p1"
+   },
+   {
+    "q": "Name a Kowloon neighbourhood",
+    "qzh": "說出一個九龍地區",
+    "answers": [
+     {
+      "en": "Mong Kok",
+      "zh": "旺角",
+      "tier": 10,
+      "aliases": [
+       "Mongkok",
+       "MK"
+      ]
+     },
+     {
+      "en": "Tsim Sha Tsui",
+      "zh": "尖沙咀",
+      "tier": 10,
+      "aliases": [
+       "TST"
+      ]
+     },
+     {
+      "en": "Sham Shui Po",
+      "zh": "深水埗",
+      "tier": 10,
+      "aliases": [
+       "SSP"
+      ]
+     },
+     {
+      "en": "Kowloon Tong",
+      "zh": "九龍塘",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Jordan",
+      "zh": "佐敦",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Yau Ma Tei",
+      "zh": "油麻地",
+      "tier": 30,
+      "aliases": [
+       "YMT"
+      ]
+     },
+     {
+      "en": "Kwun Tong",
+      "zh": "觀塘",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Hung Hom",
+      "zh": "紅磡",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Kowloon City",
+      "zh": "九龍城",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Wong Tai Sin",
+      "zh": "黃大仙",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Diamond Hill",
+      "zh": "鑽石山",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Kowloon Bay",
+      "zh": "九龍灣",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "To Kwa Wan",
+      "zh": "土瓜灣",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Ho Man Tin",
+      "zh": "何文田",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Prince Edward",
+      "zh": "太子",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Kai Tak",
+      "zh": "啟德",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Lai Chi Kok",
+      "zh": "荔枝角",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Cheung Sha Wan",
+      "zh": "長沙灣",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Mei Foo",
+      "zh": "美孚",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Whampoa",
+      "zh": "黃埔",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "San Po Kong",
+      "zh": "新蒲崗",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Lam Tin",
+      "zh": "藍田",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tai Kok Tsui",
+      "zh": "大角咀",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Shek Kip Mei",
+      "zh": "石硤尾",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Lok Fu",
+      "zh": "樂富",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Ngau Tau Kok",
+      "zh": "牛頭角",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Yau Tong",
+      "zh": "油塘",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Lei Yue Mun",
+      "zh": "鯉魚門",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Tsz Wan Shan",
+      "zh": "慈雲山",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Choi Hung",
+      "zh": "彩虹",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Sau Mau Ping",
+      "zh": "秀茂坪",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Yau Yat Chuen",
+      "zh": "又一村",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "King's Park",
+      "zh": "京士柏",
+      "tier": 100,
+      "aliases": [
+       "Kings Park"
+      ]
+     },
+     {
+      "en": "Kowloon Tsai",
+      "zh": "九龍仔",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Wang Tau Hom",
+      "zh": "橫頭磡",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "So Uk",
+      "zh": "蘇屋",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Shun Lee",
+      "zh": "順利",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Ngau Chi Wan",
+      "zh": "牛池灣",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p2"
+   },
+   {
+    "q": "Name a Hong Kong Island neighbourhood",
+    "qzh": "說出一個港島地區",
+    "answers": [
+     {
+      "en": "Central",
+      "zh": "中環",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Causeway Bay",
+      "zh": "銅鑼灣",
+      "tier": 10,
+      "aliases": [
+       "CWB"
+      ]
+     },
+     {
+      "en": "Wan Chai",
+      "zh": "灣仔",
+      "tier": 10,
+      "aliases": [
+       "Wanchai"
+      ]
+     },
+     {
+      "en": "Admiralty",
+      "zh": "金鐘",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Sheung Wan",
+      "zh": "上環",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Stanley",
+      "zh": "赤柱",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Aberdeen",
+      "zh": "香港仔",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "North Point",
+      "zh": "北角",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Happy Valley",
+      "zh": "跑馬地",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Kennedy Town",
+      "zh": "堅尼地城",
+      "tier": 30,
+      "aliases": [
+       "KTown"
+      ]
+     },
+     {
+      "en": "Mid-Levels",
+      "zh": "半山",
+      "tier": 30,
+      "aliases": [
+       "Midlevels",
+       "Mid Levels"
+      ]
+     },
+     {
+      "en": "Repulse Bay",
+      "zh": "淺水灣",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Sai Ying Pun",
+      "zh": "西營盤",
+      "tier": 60,
+      "aliases": [
+       "SYP"
+      ]
+     },
+     {
+      "en": "Quarry Bay",
+      "zh": "鰂魚涌",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tai Koo",
+      "zh": "太古",
+      "tier": 60,
+      "aliases": [
+       "Taikoo"
+      ]
+     },
+     {
+      "en": "Shau Kei Wan",
+      "zh": "筲箕灣",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Chai Wan",
+      "zh": "柴灣",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tai Hang",
+      "zh": "大坑",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Pok Fu Lam",
+      "zh": "薄扶林",
+      "tier": 60,
+      "aliases": [
+       "Pokfulam"
+      ]
+     },
+     {
+      "en": "Ap Lei Chau",
+      "zh": "鴨脷洲",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Wong Chuk Hang",
+      "zh": "黃竹坑",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Shek O",
+      "zh": "石澳",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Tin Hau",
+      "zh": "天后",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Fortress Hill",
+      "zh": "炮台山",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Shek Tong Tsui",
+      "zh": "石塘咀",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Tai Tam",
+      "zh": "大潭",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Deep Water Bay",
+      "zh": "深水灣",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Cyberport",
+      "zh": "數碼港",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Jardine's Lookout",
+      "zh": "渣甸山",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Braemar Hill",
+      "zh": "寶馬山",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Siu Sai Wan",
+      "zh": "小西灣",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Sai Wan Ho",
+      "zh": "西灣河",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Heng Fa Chuen",
+      "zh": "杏花邨",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Chung Hom Kok",
+      "zh": "舂坎角",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Wah Fu",
+      "zh": "華富",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Tin Wan",
+      "zh": "田灣",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Mount Davis",
+      "zh": "摩星嶺",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Shouson Hill",
+      "zh": "壽臣山",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p3"
+   },
+   {
+    "q": "Name a university in Hong Kong",
+    "qzh": "說出一間香港大學",
+    "answers": [
+     {
+      "en": "HKU",
+      "zh": "香港大學",
+      "tier": 10,
+      "aliases": [
+       "University of Hong Kong",
+       "Hong Kong University",
+       "港大"
+      ]
+     },
+     {
+      "en": "CUHK",
+      "zh": "香港中文大學",
+      "tier": 10,
+      "aliases": [
+       "Chinese University of Hong Kong",
+       "Chinese University",
+       "中大"
+      ]
+     },
+     {
+      "en": "HKUST",
+      "zh": "香港科技大學",
+      "tier": 10,
+      "aliases": [
+       "UST",
+       "Hong Kong University of Science and Technology",
+       "科大"
+      ]
+     },
+     {
+      "en": "PolyU",
+      "zh": "香港理工大學",
+      "tier": 30,
+      "aliases": [
+       "Hong Kong Polytechnic University",
+       "Poly U",
+       "理大"
+      ]
+     },
+     {
+      "en": "CityU",
+      "zh": "香港城市大學",
+      "tier": 30,
+      "aliases": [
+       "City University of Hong Kong",
+       "City U",
+       "城大"
+      ]
+     },
+     {
+      "en": "HKBU",
+      "zh": "香港浸會大學",
+      "tier": 30,
+      "aliases": [
+       "Hong Kong Baptist University",
+       "Baptist University",
+       "浸大"
+      ]
+     },
+     {
+      "en": "Lingnan University",
+      "zh": "嶺南大學",
+      "tier": 60,
+      "aliases": [
+       "LingU",
+       "Lingnan",
+       "嶺大"
+      ]
+     },
+     {
+      "en": "EdUHK",
+      "zh": "香港教育大學",
+      "tier": 60,
+      "aliases": [
+       "Education University of Hong Kong",
+       "EdU",
+       "教大"
+      ]
+     },
+     {
+      "en": "HKMU",
+      "zh": "香港都會大學",
+      "tier": 60,
+      "aliases": [
+       "Hong Kong Metropolitan University",
+       "Open University",
+       "OUHK",
+       "都大"
+      ]
+     },
+     {
+      "en": "HKAPA",
+      "zh": "香港演藝學院",
+      "tier": 85,
+      "aliases": [
+       "Academy for Performing Arts",
+       "APA",
+       "演藝"
+      ]
+     },
+     {
+      "en": "Hang Seng University",
+      "zh": "香港恒生大學",
+      "tier": 85,
+      "aliases": [
+       "HSUHK",
+       "恒大"
+      ]
+     },
+     {
+      "en": "Shue Yan University",
+      "zh": "香港樹仁大學",
+      "tier": 85,
+      "aliases": [
+       "HKSYU",
+       "Shue Yan",
+       "樹仁"
+      ]
+     },
+     {
+      "en": "Saint Francis University",
+      "zh": "聖方濟各大學",
+      "tier": 100,
+      "aliases": [
+       "SFU",
+       "Caritas Institute of Higher Education"
+      ],
+      "check": true
+     },
+     {
+      "en": "Chu Hai College",
+      "zh": "珠海學院",
+      "tier": 100,
+      "aliases": [
+       "Chu Hai"
+      ]
+     },
+     {
+      "en": "Tung Wah College",
+      "zh": "東華學院",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p4"
+   },
+   {
+    "q": "Name a Hong Kong ferry pier or ferry destination",
+    "qzh": "說出一個香港碼頭或渡輪目的地",
+    "answers": [
+     {
+      "en": "Star Ferry Pier",
+      "zh": "天星碼頭",
+      "tier": 10,
+      "aliases": [
+       "Star Ferry"
+      ]
+     },
+     {
+      "en": "Cheung Chau",
+      "zh": "長洲",
+      "tier": 10,
+      "aliases": []
+     },
+     {
+      "en": "Central Ferry Piers",
+      "zh": "中環碼頭",
+      "tier": 30,
+      "aliases": [
+       "Central Pier"
+      ]
+     },
+     {
+      "en": "Lamma",
+      "zh": "南丫島",
+      "tier": 30,
+      "aliases": [
+       "Lamma Island"
+      ]
+     },
+     {
+      "en": "Mui Wo",
+      "zh": "梅窩",
+      "tier": 30,
+      "aliases": [
+       "Silvermine Bay"
+      ]
+     },
+     {
+      "en": "Discovery Bay",
+      "zh": "愉景灣",
+      "tier": 30,
+      "aliases": [
+       "DB"
+      ]
+     },
+     {
+      "en": "Peng Chau",
+      "zh": "坪洲",
+      "tier": 30,
+      "aliases": []
+     },
+     {
+      "en": "Tsim Sha Tsui",
+      "zh": "尖沙咀",
+      "tier": 30,
+      "aliases": [
+       "TST"
+      ]
+     },
+     {
+      "en": "Yung Shue Wan",
+      "zh": "榕樹灣",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Sok Kwu Wan",
+      "zh": "索罟灣",
+      "tier": 60,
+      "aliases": []
+     },
+     {
+      "en": "Wan Chai Ferry Pier",
+      "zh": "灣仔碼頭",
+      "tier": 60,
+      "aliases": [
+       "Wan Chai Pier"
+      ]
+     },
+     {
+      "en": "Ma Wan",
+      "zh": "馬灣",
+      "tier": 60,
+      "aliases": [
+       "Park Island"
+      ]
+     },
+     {
+      "en": "Sai Kung Pier",
+      "zh": "西貢碼頭",
+      "tier": 60,
+      "aliases": [
+       "Sai Kung"
+      ]
+     },
+     {
+      "en": "Aberdeen",
+      "zh": "香港仔",
+      "tier": 60,
+      "aliases": [
+       "Aberdeen Promenade"
+      ]
+     },
+     {
+      "en": "North Point Ferry Pier",
+      "zh": "北角碼頭",
+      "tier": 60,
+      "aliases": [
+       "North Point"
+      ]
+     },
+     {
+      "en": "Tai O",
+      "zh": "大澳",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Tung Chung",
+      "zh": "東涌",
+      "tier": 85,
+      "aliases": [
+       "Tung Chung Pier"
+      ]
+     },
+     {
+      "en": "Sai Wan Ho Ferry Pier",
+      "zh": "西灣河碼頭",
+      "tier": 85,
+      "aliases": [
+       "Sai Wan Ho"
+      ]
+     },
+     {
+      "en": "Ma Liu Shui",
+      "zh": "馬料水",
+      "tier": 85,
+      "aliases": [
+       "Ma Liu Shui Pier"
+      ]
+     },
+     {
+      "en": "Tap Mun",
+      "zh": "塔門",
+      "tier": 85,
+      "aliases": []
+     },
+     {
+      "en": "Kat O",
+      "zh": "吉澳",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Wong Shek Pier",
+      "zh": "黃石碼頭",
+      "tier": 100,
+      "aliases": [
+       "Wong Shek"
+      ]
+     },
+     {
+      "en": "Po Toi",
+      "zh": "蒲台島",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Sam Ka Tsuen",
+      "zh": "三家村",
+      "tier": 100,
+      "aliases": [
+       "Sam Ka Tsuen Pier"
+      ]
+     },
+     {
+      "en": "Tung Lung Chau",
+      "zh": "東龍洲",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Yim Tin Tsai",
+      "zh": "鹽田梓",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Chi Ma Wan",
+      "zh": "芝麻灣",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Hei Ling Chau",
+      "zh": "喜靈洲",
+      "tier": 100,
+      "aliases": []
+     },
+     {
+      "en": "Sha Tau Kok Pier",
+      "zh": "沙頭角碼頭",
+      "tier": 100,
+      "aliases": []
+     }
+    ],
+    "id": "p5"
+   }
+  ]
+ }
+}
