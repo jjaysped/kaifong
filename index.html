@@ -47,7 +47,8 @@ p{margin:0}
 .board .inner{padding:20px 20px 18px;display:flex;flex-direction:column;gap:14px}
 .qzh{font:900 clamp(26px,6.4vw,36px)/1.25 var(--f-han);text-wrap:balance}
 .qen{font:600 17px/1.35 var(--f-sans);text-wrap:balance}
-.meta{display:flex;justify-content:space-between;align-items:center;gap:8px;font:600 12px/1 var(--f-mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.meta{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:4px 12px;font:600 12px/1 var(--f-mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.meta span{white-space:nowrap}
 .timer{height:6px;background:var(--tile);border-radius:3px;overflow:hidden}
 .timer i{display:block;height:100%;width:100%;background:var(--ink);transform-origin:left;}
 .timer.low i{background:var(--red)}
@@ -59,29 +60,31 @@ button.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
 button.small{padding:7px 10px;font-size:12px}
 button:disabled{opacity:.45;cursor:not-allowed}
 /* tiers */
-.pill{display:inline-flex;align-items:center;gap:6px;font:700 12px/1 var(--f-sans);padding:5px 9px;border-radius:3px;color:#fff;white-space:nowrap}
+.pill{display:inline-flex;align-items:center;gap:6px;font:700 12px/1 var(--f-sans);padding:5px 9px;border-radius:3px;color:#fff;white-space:nowrap;max-width:100%}
 .t10{background:var(--grey)} .t30{background:var(--green)} .t60{background:var(--blue)} .t85{background:var(--red)} .t100{background:var(--gold)} .t0{background:var(--miss)}
-.legend{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
-.legend div{display:flex;flex-direction:column;gap:6px;align-items:flex-start;font:12px/1.3 var(--f-sans);color:var(--muted)}
+.legend{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.legend div{display:grid;grid-template-columns:44px auto minmax(0,1fr);gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font:13px/1.3 var(--f-sans);color:var(--muted)}
 .legend b{font:600 18px/1 var(--f-mono);color:var(--ink);font-variant-numeric:tabular-nums}
-@media (max-width:520px){.legend{grid-template-columns:repeat(3,1fr)}}
 .result{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px;border:1px dashed var(--line);border-radius:4px}
-.result .ans{font:700 18px/1.25 var(--f-sans)} .result .ans small{display:block;font:400 14px/1.3 var(--f-tc);color:var(--muted)}
+.result .ans{font:700 18px/1.25 var(--f-sans);min-width:0} .result .ans small{display:block;font:400 14px/1.3 var(--f-tc);color:var(--muted)}
 .pts{font:600 30px/1 var(--f-mono);font-variant-numeric:tabular-nums}
 .score{display:flex;align-items:baseline;gap:8px}
 .score .big{font:600 56px/1 var(--f-mono);font-variant-numeric:tabular-nums}
 .list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
-.list>div{display:grid;grid-template-columns:28px 1fr auto auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
-.list .n{font:600 12px/1 var(--f-mono);color:var(--muted)}
-.list .q{font-size:13px;color:var(--muted);min-width:0}
-.list .q b{display:block;color:var(--ink);font-size:15px}
-.list .p{font:600 16px/1 var(--f-mono);font-variant-numeric:tabular-nums;min-width:34px;text-align:right}
+.list>div{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:12px;align-items:start;padding:12px 0;border-bottom:1px solid var(--line)}
+.list .n{font:600 12px/1 var(--f-mono);color:var(--muted);padding-top:5px}
+.list .q{font-size:13px;line-height:1.4;color:var(--muted);min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.list .q b{color:var(--ink);font-size:15px;line-height:1.3}
+.list .q b small{display:block;font:400 13px/1.4 var(--f-tc);color:var(--ink);opacity:.8}
+.list .q .pill{margin-top:2px}
+.list .p{font:600 18px/1 var(--f-mono);font-variant-numeric:tabular-nums;min-width:36px;text-align:right;padding-top:2px}
 details{border-top:1px solid var(--line);padding-top:10px}
-summary{cursor:pointer;font-weight:600}
+summary{cursor:pointer;font-weight:600;line-height:1.35}
 .reveal{display:flex;flex-direction:column;gap:10px;margin-top:10px}
-.reveal .tier{display:grid;grid-template-columns:92px 1fr;gap:10px;align-items:start}
-.reveal .names{font-size:13px;line-height:1.6;color:var(--ink)}
-.reveal .names span{white-space:nowrap}
+.reveal .tier{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding-bottom:4px}
+.reveal .names{display:flex;flex-wrap:wrap;gap:6px;font-size:13px;line-height:1.3;color:var(--ink)}
+.reveal .names span{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:0 5px;max-width:100%;padding:5px 9px;border:1px solid var(--line);border-radius:3px;background:var(--wall)}
+.reveal .names span i{font-style:normal;font-family:var(--f-tc);color:var(--muted)}
 .reveal .names em{font-style:normal;color:var(--muted);font:500 11px var(--f-mono)}
 .empty{text-align:center;padding:36px 18px;display:flex;flex-direction:column;gap:10px;align-items:center}
 .empty .han{font:900 40px/1 var(--f-han);color:var(--muted)}
@@ -226,7 +229,7 @@ function renderPlay(dateOverride){
     <div class="meta"><span>No. ${dayNo(date)} · ${fmtDate(date)}</span><span>${pack.prompts.length} prompts · ${SECS}s each</span></div>
     <div class="qzh">答得愈冷門，分數愈高</div>
     <div class="qen">Five Hong Kong prompts. Any correct answer scores, but the less obvious it is, the more it's worth.</div>
-    <div class="legend">${Object.entries(TIERS).map(([t,[en,zh]])=>`<div><span class="pill t${t}">${zh}</span><b>${t}</b>${en}</div>`).join("")}</div>
+    <div class="legend">${Object.entries(TIERS).map(([t,[en,zh]])=>`<div><b>${t}</b><span class="pill t${t}">${zh}</span><span>${en}</span></div>`).join("")}</div>
     <div class="row"><button id="go">Start today's ride</button></div>
   </div></section>
   <p class="note">English, 中文 and common short forms (TST, CWB, HKU) all count. Small typos are forgiven.</p>`;
@@ -306,7 +309,7 @@ function renderResults(date){
   <section class="board"><div class="band"></div><div class="inner">
     <div class="meta"><span>No. ${dayNo(date)} · ${fmtDate(date)}</span><span>Final</span></div>
     <div class="score"><span class="big">${total}</span><span class="sub">/ ${rec.picks.length*100}</span></div>
-    <div class="list">${rec.picks.map((pk,i)=>{const p=pack?.prompts.find(x=>x.id===pk.p);return `<div><span class="n">${i+1}</span><span class="q"><b>${pk.en?esc(pk.en):pk.raw?"“"+esc(pk.raw)+"”":"—"}</b>${esc(p?.q||"")}</span>${pill(pk.tier)}<span class="p">${pk.tier}</span></div>`}).join("")}</div>
+    <div class="list">${rec.picks.map((pk,i)=>{const p=pack?.prompts.find(x=>x.id===pk.p);return `<div><span class="n">${i+1}</span><span class="q"><b>${pk.en?esc(pk.en)+(pk.zh?"<small>"+esc(pk.zh)+"</small>":""):pk.raw?"“"+esc(pk.raw)+"”":"—"}</b><span>${esc(p?.q||"")}</span>${pill(pk.tier)}</span><span class="p">${pk.tier}</span></div>`}).join("")}</div>
     <div class="row"><button id="cp">Copy result</button><a href="#archive" class="sub" style="align-self:center">Play another day →</a></div>
     <pre id="sh" class="sub" style="margin:0;white-space:pre-wrap">${esc(share)}</pre>
   </div></section>
@@ -319,7 +322,7 @@ function paintReveal(date){
   const cm=community[date];
   box.innerHTML=pack.prompts.map((p,i)=>`<details ${i===0?"open":""}><summary>${i+1}. ${esc(p.q)}</summary><div class="reveal">${
     [100,85,60,30,10].map(t=>{const as=p.answers.filter(a=>a.tier===t);if(!as.length)return"";
-      return `<div class="tier"><span class="pill t${t}">${TIERS[t][1]}</span><div class="names">${as.map(a=>{const c=cm?.c?.[p.id]?.[a.en];return `<span>${esc(a.en)} ${esc(a.zh)}${c?` <em>×${c}</em>`:""}</span>`}).join(" · ")}</div></div>`}).join("")
+      return `<div class="tier"><span class="pill t${t}">${TIERS[t][1]} · ${TIERS[t][0]} · ${t}</span><div class="names">${as.map(a=>{const c=cm?.c?.[p.id]?.[a.en];return `<span>${esc(a.en)} <i>${esc(a.zh)}</i>${c?` <em>×${c}</em>`:""}</span>`}).join("")}</div></div>`}).join("")
   }</div></details>`).join("");
 }
 function renderArchive(){
