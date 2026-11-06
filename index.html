@@ -89,6 +89,16 @@ summary{cursor:pointer;font-weight:600;line-height:1.35}
 .empty{text-align:center;padding:36px 18px;display:flex;flex-direction:column;gap:10px;align-items:center}
 .empty .han{font:900 40px/1 var(--f-han);color:var(--muted)}
 .note{font-size:13px;color:var(--muted)}
+#app{display:flex;flex-direction:column;gap:14px}
+.pct{display:flex;flex-direction:column;gap:12px}
+.pcth{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.pcth .big{font:600 44px/1 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--accent)}
+.pcth span:last-child{font-weight:600;min-width:0}
+.hist{display:grid;grid-template-columns:repeat(11,1fr);gap:4px;align-items:end;height:96px;border-bottom:1px solid var(--line)}
+.hist i{display:block;background:color-mix(in srgb,var(--ink) 22%,var(--board));border-radius:2px 2px 0 0}
+.hist i.me{background:var(--accent)}
+.histx{display:flex;justify-content:space-between;font:500 11px/1 var(--f-mono);color:var(--muted)}
+.you{color:var(--accent)}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--board);padding:10px 16px;border-radius:4px;font-weight:600;z-index:20}
 .arch{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
 .arch button{display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;background:var(--board);color:var(--ink);border-color:var(--line);padding:12px}
@@ -129,6 +139,13 @@ textarea{width:100%;min-height:140px;font:12px/1.4 var(--f-mono)}
 const TIERS={10:["Tourist","遊客"],30:["Local","本地人"],60:["Kaifong","街坊"],85:["Old Hand","老香港"],100:["One in 7.5 Million","七百五十萬分之一"]};
 const EMO={0:"⬛",10:"⬜",30:"🟩",60:"🟦",85:"🟥",100:"🟨"};
 const SECS=25, EPOCH="2026-11-01";
+const SB_URL="https://zonmxbyelfwozigzpkdu.supabase.co", SB_KEY="sb_publishable_VPl4c70txHbkS9UkWq8uIA_F5ug7Nh2", MIN_N=20;
+function deviceId(){let d=ls.get("kf:dev");if(!d){d=(crypto.randomUUID?crypto.randomUUID():Date.now().toString(36)+Math.random().toString(36).slice(2,12));ls.set("kf:dev",d)}return d}
+async function sb(path,body,prefer){
+  const r=await fetch(SB_URL+"/rest/v1/"+path,{method:"POST",headers:{apikey:SB_KEY,"Content-Type":"application/json",...(prefer?{Prefer:prefer}:{})},body:JSON.stringify(body)});
+  if(r.status===409)return null; if(!r.ok)throw new Error("sb "+r.status);
+  const t=await r.text(); return t?JSON.parse(t):null;
+}
 const $=s=>document.querySelector(s);
 const app=$("#app");
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -291,11 +308,24 @@ async function finish(){
   ls.set("kf:"+game.date,rec);
   if(myPlays){myPlays.days={...(myPlays.days||{}),[game.date]:rec}}
   renderResults(game.date);
+  const d=game.date;
+  if(!db&&d===hkToday()&&!ls.get("kf:sent:"+d)){
+    sb("plays",{day:d,device:deviceId(),total:rec.total,picks:rec.picks.map(x=>({p:x.p,en:x.en,tier:x.tier,raw:x.en?null:(x.raw||null)}))},"return=minimal")
+      .then(()=>{ls.set("kf:sent:"+d,1);loadCommunity(d)}).catch(()=>{});
+  }
   if(db&&uid&&canWrite){try{await db.doc("plays/"+uid).set({days:myPlays.days})}catch(e){if(e.code==="invalid_argument")canWrite=false}}
 }
 let community={};
 async function loadCommunity(date){
-  if(!db)return;
+  const seq=loadCommunity.s=(loadCommunity.s||0)+1;
+  if(!db){
+    try{const s=await sb("rpc/day_stats",{d:date}); if(seq!==loadCommunity.s||!s)return;
+      const c={}; for(const [k,v] of Object.entries(s.picks||{})){const i=k.indexOf("|");(c[k.slice(0,i)]??={})[k.slice(i+1)]=v}
+      community[date]={n:+s.n||0,c,scores:(s.scores||[]).map(Number)};
+      if(view==="play"&&(!game||game.done||game.date!==date)){paintReveal(date);paintPct(date)}
+    }catch(e){}
+    return;
+  }
   try{const s=await db.collection("plays").get();const c={};let n=0;
     s.docs.forEach(d=>{const day=(d.data().days||{})[date];if(!day)return;n++;day.picks.forEach(pk=>{if(!pk.en)return;(c[pk.p]??={})[pk.en]=(c[pk.p][pk.en]||0)+1})});
     community[date]={n,c}; if(view==="play"&&(!game||game.done)) paintReveal(date);
@@ -313,16 +343,33 @@ function renderResults(date){
     <div class="row"><button id="cp">Copy result</button><a href="#archive" class="sub" style="align-self:center">Play another day →</a></div>
     <pre id="sh" class="sub" style="margin:0;white-space:pre-wrap">${esc(share)}</pre>
   </div></section>
-  <section class="panel" id="rv"><h2>Every answer on the list</h2><p class="note">Grouped by tier. Numbers show how many players picked each answer.</p><div id="rvb"></div></section>`;
+  <section class="panel pct" id="pct" hidden></section>
+  <section class="panel" id="rv"><h2>Every answer on the list</h2><p class="note" id="rvn">Grouped by tier, rarest first.</p><div id="rvb"></div></section>`;
   $("#cp").onclick=async()=>{try{await navigator.clipboard.writeText(share);toast("Copied")}catch(e){const r=document.createRange();r.selectNodeContents($("#sh"));const s=getSelection();s.removeAllRanges();s.addRange(r);toast("Selected. Copy it from here")}};
-  paintReveal(date); loadCommunity(date);
+  paintReveal(date); paintPct(date); loadCommunity(date);
+}
+function paintPct(date){
+  const box=$("#pct"), cm=community[date], rec=savedResult(date); if(!box||!rec)return;
+  if(!cm||!cm.n){box.hidden=true;return}
+  const mine=rec.picks.reduce((s,x)=>s+x.tier,0), n=cm.n, sc=cm.scores||[];
+  const below=sc.filter(s=>s<mine).length, pct=Math.round(below/n*100);
+  const bins=Array(11).fill(0); sc.forEach(s=>bins[Math.min(10,Math.floor(s/50))]++); const mx=Math.max(1,...bins), myb=Math.min(10,Math.floor(mine/50));
+  const avg=Math.round(sc.reduce((a,b)=>a+b,0)/Math.max(1,sc.length));
+  box.innerHTML=`<div class="meta"><span>No. ${dayNo(date)} · ${n} player${n===1?"":"s"}</span><span>Average ${avg}</span></div>
+    ${n>=MIN_N?`<div class="pcth"><span class="big">${pct}%</span><span>You scored higher than ${pct}% of players${date===hkToday()?" today":" that day"}.</span></div>`
+      :`<div class="pcth"><span>Your percentile appears once ${MIN_N} people have played. ${n} so far.</span></div>`}
+    <div class="hist" role="img" aria-label="Score distribution">${bins.map((b,i)=>`<i class="${i===myb?"me":""}" style="height:${Math.max(3,b/mx*100)}%" title="${i*50}–${i===10?500:i*50+49}: ${b}"></i>`).join("")}</div>
+    <div class="histx"><span>0</span><span>250</span><span>500</span></div>
+    <p class="note">Each bar is a 50-point band. <b class="you">Red</b> is yours.</p>`;
+  box.hidden=false;
+  const rn=$("#rvn"); if(rn) rn.textContent="Grouped by tier, rarest first. Percentages show how many players picked each answer.";
 }
 function paintReveal(date){
   const box=$("#rvb"); if(!box)return; const pack=packs[date]; if(!pack){box.innerHTML="";return}
   const cm=community[date];
   box.innerHTML=pack.prompts.map((p,i)=>`<details ${i===0?"open":""}><summary>${i+1}. ${esc(p.q)}</summary><div class="reveal">${
     [100,85,60,30,10].map(t=>{const as=p.answers.filter(a=>a.tier===t);if(!as.length)return"";
-      return `<div class="tier"><span class="pill t${t}">${TIERS[t][1]} · ${TIERS[t][0]} · ${t}</span><div class="names">${as.map(a=>{const c=cm?.c?.[p.id]?.[a.en];return `<span>${esc(a.en)} <i>${esc(a.zh)}</i>${c?` <em>×${c}</em>`:""}</span>`}).join("")}</div></div>`}).join("")
+      return `<div class="tier"><span class="pill t${t}">${TIERS[t][1]} · ${TIERS[t][0]} · ${t}</span><div class="names">${as.map(a=>{const c=cm?.c?.[p.id]?.[a.en];return `<span>${esc(a.en)} <i>${esc(a.zh)}</i>${c&&cm.n?` <em>${Math.max(1,Math.round(c/cm.n*100))}%</em>`:""}</span>`}).join("")}</div></div>`}).join("")
   }</div></details>`).join("");
 }
 function renderArchive(){
